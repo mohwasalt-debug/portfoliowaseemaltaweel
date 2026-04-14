@@ -10,25 +10,25 @@
 /* ===================== DESIGN TOKENS ===================== */
 :root {
   /* Couleurs de fond — dégradé lumineux */
-  --bg-top:    #F9FAFD;
-  --bg-mid:    #EEF3FF;
-  --bg-bottom: #E8ECF9;
+  --bg-top:    #0a1026;
+  --bg-mid:    #121a37;
+  --bg-bottom: #1a2450;
 
   /* Encres */
-  --ink-1000: #0E0E10;
-  --ink-900:  #1C1C1E;
-  --ink-700:  #2C2C2F;
-  --ink-600:  #55565A;
-  --ink-400:  #8F9096;
+  --ink-1000: #F7FBFF;
+  --ink-900:  #E9F0FF;
+  --ink-700:  #C8D4F2;
+  --ink-600:  #A7B6D9;
+  --ink-400:  #7F91BD;
 
   /* Accents */
-  --c-blue:   #00A8FF;
-  --c-violet: #7B61FF;
-  --c-green:  #30D158;
-  --c-pink:   #FF2D55;
+  --c-blue:   #35D9FF;
+  --c-violet: #8A7CFF;
+  --c-green:  #5DFFB2;
+  --c-pink:   #FF4FD8;
 
   /* Couleur principale du portfolio */
-  --c-primary: #63806f;
+  --c-primary: #7cd9ff;
 
   /* Dégradés */
   --grad-hero:   linear-gradient(160deg, var(--bg-top) 0%, var(--bg-mid) 50%, var(--bg-bottom) 100%);
@@ -36,10 +36,10 @@
   --grad-accent-wide: linear-gradient(90deg, var(--c-blue) 0%, var(--c-violet) 40%, var(--c-green) 75%, var(--c-pink) 100%);
 
   /* Liquid Glass */
-  --glass-bg:     rgba(255, 255, 255, 0.55);
-  --glass-border: rgba(255, 255, 255, 0.70);
-  --glass-blur:   blur(20px) saturate(180%);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --glass-bg:     rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(179, 231, 255, 0.35);
+  --glass-blur:   blur(22px) saturate(190%);
+  --glass-shadow: 0 12px 36px rgba(10, 18, 45, 0.45);
 
   /* Ombres */
   --shadow-soft:
@@ -82,10 +82,42 @@ body {
   font-size: 16px;
   line-height: 1.65;
   color: var(--ink-900);
-  background: var(--grad-hero);
+  background:
+    radial-gradient(1200px 580px at -10% -10%, rgba(53, 217, 255, 0.24), transparent 60%),
+    radial-gradient(1000px 520px at 110% 0%, rgba(138, 124, 255, 0.26), transparent 62%),
+    radial-gradient(900px 480px at 60% 120%, rgba(255, 79, 216, 0.20), transparent 64%),
+    var(--grad-hero);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  width: 380px;
+  height: 380px;
+  top: 8%;
+  left: -90px;
+  background: rgba(53, 217, 255, 0.28);
+}
+
+body::after {
+  width: 420px;
+  height: 420px;
+  right: -110px;
+  bottom: 2%;
+  background: rgba(255, 79, 216, 0.25);
 }
 
 img {
@@ -186,7 +218,7 @@ p { color: var(--ink-700); }
 }
 
 .glass:hover {
-  background: rgba(255, 255, 255, 0.70);
+  background: rgba(255, 255, 255, 0.14);
   box-shadow: var(--shadow-lifted);
 }
 
@@ -271,7 +303,7 @@ p { color: var(--ink-700); }
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(249, 250, 253, 0.70);
+  background: rgba(10, 18, 45, 0.45);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--glass-border);
@@ -325,8 +357,9 @@ nav .nav-menu li a {
 }
 
 nav .nav-menu li a:hover {
-  color: var(--ink-1000);
-  background: rgba(0, 0, 0, 0.05);
+  color: #ffffff;
+  background: rgba(138, 124, 255, 0.18);
+  box-shadow: 0 0 0 1px rgba(179, 231, 255, 0.22) inset;
 }
 
 nav .nav-menu li .btn.accent {
@@ -449,7 +482,7 @@ nav .nav-menu li .btn.accent {
 
 .nav-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lifted);
+  box-shadow: 0 16px 40px rgba(16, 28, 70, 0.45), 0 0 24px rgba(53, 217, 255, 0.22);
   color: inherit;
 }
 
@@ -965,7 +998,7 @@ a.contact-item:hover {
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lifted);
+  box-shadow: 0 16px 40px rgba(16, 28, 70, 0.45), 0 0 24px rgba(138, 124, 255, 0.24);
 }
 
 .project-img {
@@ -1217,7 +1250,7 @@ a.contact-item:hover {
 footer {
   padding: 32px 0;
   border-top: 1px solid var(--glass-border);
-  background: rgba(249, 250, 253, 0.60);
+  background: rgba(10, 18, 45, 0.40);
   backdrop-filter: blur(10px);
 }
 
@@ -1389,4 +1422,233 @@ footer {
   .qualities-grid { grid-template-columns: 1fr; }
   .bilan-grid     { grid-template-columns: 1fr; }
   .timeline-item  { border-radius: var(--radius-md); }
+}
+
+/* ===================== LEGACY MARKUP COMPAT ===================== */
+/* Permet de styliser les anciennes structures HTML des pages existantes. */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 18, 45, 0.45);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 24px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  height: 44px;
+  width: auto;
+  border-radius: 10px;
+}
+
+header nav .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+header nav .nav-menu li a {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-700);
+}
+
+header nav .nav-menu li a:hover {
+  color: #fff;
+  background: rgba(138, 124, 255, 0.18);
+  box-shadow: 0 0 0 1px rgba(179, 231, 255, 0.22) inset;
+}
+
+main,
+.contact-section,
+.site-map-section,
+.mentions-legales,
+.projects-section,
+.about-section {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.navigation-accueil {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 36px 0 70px;
+}
+
+.nav-item {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(16, 28, 70, 0.35);
+  transition: transform var(--t-fast), box-shadow var(--t-fast), border-color var(--t-fast);
+}
+
+.nav-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(179, 231, 255, 0.55);
+  box-shadow: 0 18px 40px rgba(16, 28, 70, 0.48), 0 0 20px rgba(53, 217, 255, 0.24);
+}
+
+.nav-item img {
+  border-radius: var(--radius-md);
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 48px 0 20px;
+}
+
+.intro h1 { margin-bottom: 10px; }
+.intro p { margin-bottom: 14px; }
+
+.experience,
+.formation,
+.competences {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+  margin: 18px 0;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 22px;
+  padding-bottom: 60px;
+}
+
+.projects-container .project {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: 0 12px 30px rgba(16, 28, 70, 0.35);
+  transition: transform var(--t-fast), box-shadow var(--t-fast), border-color var(--t-fast);
+}
+
+.projects-container .project:hover {
+  transform: translateY(-5px);
+  border-color: rgba(179, 231, 255, 0.55);
+  box-shadow: 0 18px 42px rgba(16, 28, 70, 0.5), 0 0 18px rgba(138, 124, 255, 0.26);
+}
+
+.projects-container .project img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+}
+
+.contact-section {
+  padding: 40px 0 70px;
+}
+
+.contact-form-info {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.contact-form,
+.contact-info {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.input-group img,
+.contact-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.80);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.site-map-container img {
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  margin: 24px auto;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+footer ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .navigation-accueil,
+  .projects-container,
+  .contact-form-info,
+  .presentation {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
 }
