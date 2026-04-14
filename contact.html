@@ -1,78 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Altaweel Waseem</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact - Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS spécifique à cette page -->
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Logo Altaweel Waseem">
-      <span class="brand-text">Altaweel Waseem</span>
-    </div>
-    <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="about.html">Profil</a></li>
-        <li><a href="projets-pro.html">Projets Pro</a></li>
-        <li><a href="projets-perso.html">Projets Perso</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="contact-section">
-    <p class="kicker">Disponibilité</p>
-    <h1>Construisons votre prochain projet IT.</h1>
-    <p>Je suis disponible pour échanger sur une mission en support, infrastructure, réseau ou cybersécurité opérationnelle.</p>
+    <!-- HEADER avec logo et navigation -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Altaweel Waseem">
+            <span class="brand-text">BE DIFFERENT</span>
+        </div>
 
-    <div class="contact-form-info">
-      <form class="contact-form">
-        <div class="input-group">
-          <img src="tel.png" alt="Téléphone">
-          <input type="text" placeholder="Votre téléphone" required>
-        </div>
-        <div class="input-group">
-          <img src="email.png" alt="Email">
-          <input type="email" placeholder="Votre email" required>
-        </div>
-        <div class="input-group">
-          <img src="adresse.png" alt="Adresse">
-          <input type="text" placeholder="Votre besoin / contexte" required>
-        </div>
-        <button type="submit" class="submit-btn">Envoyer</button>
-      </form>
+        <!-- Bouton menu burger pour la navigation mobile -->
+        <button class="menu-toggle">&#9776;</button>
 
-      <aside class="contact-info">
-        <h2>Coordonnées</h2>
-        <div class="contact-item">
-          <img src="tel.png" alt="Téléphone">
-          <span>07 67 78 83 65</span>
-        </div>
-        <div class="contact-item">
-          <img src="email.png" alt="Email">
-          <span>mohwasalt@gmail.com</span>
-        </div>
-        <div class="contact-item">
-          <img src="adresse.png" alt="Adresse">
-          <span>Paris, France</span>
-        </div>
-        <a class="btn" href="cv.pdf" download="CV_Altaweel_Waseem.pdf">Télécharger le CV</a>
-      </aside>
-    </div>
-  </main>
+        <!-- Menu de navigation principal -->
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-btn"><a href="about.html">Qui suis-je ?</a></li>
+                <li class="nav-btn"><a href="projets-pro.html">Projets Pro</a></li>
+                <li class="nav-btn"><a href="projets-perso.html">Projets Perso</a></li>
+                <li class="nav-btn accueil"><a href="index.html">Accueil</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <footer>
-    <ul>
-      <li><a href="mentions-legales.html">Mentions légales</a></li>
-      <li><a href="plan-du-site.html">Plan du site</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <p>© 2026 Altaweel Waseem — Portfolio</p>
-  </footer>
+    <!-- SECTION CONTACT avec formulaire et infos de contact -->
+    <section class="contact-section">
+        <h2>Une question ?</h2>
+        <p><em>Quoi de mieux que de prendre contact !</em></p>
 
-  <script src="menu.js"></script>
+        <div class="contact-form-info">
+            <!-- FORMULAIRE DE CONTACT -->
+            <form class="contact-form">
+                <div class="input-group">
+                    <img src="tel.png" alt="Téléphone">
+                    <input type="text" placeholder="Votre téléphone" required>
+                </div>
+
+                <div class="input-group">
+                    <img src="email.png" alt="Email">
+                    <input type="email" placeholder="Votre email" required>
+                </div>
+
+                <div class="input-group">
+                    <img src="adresse.png" alt="Adresse">
+                    <input type="text" placeholder="Votre adresse" required>
+                </div>
+
+                <!-- Bouton d'envoi du formulaire -->
+                <button type="submit" class="submit-btn"><em>ENVOYER</em></button>
+            </form>
+
+            <!-- SECTION INFORMATIONS DE CONTACT -->
+            <div class="contact-info">
+                <h3><em>Mes contacts</em></h3>
+
+                <div class="contact-item">
+                    <img src="tel.png" alt="Téléphone">
+                    <span>0767788365</span>
+                </div>
+
+                <div class="contact-item">
+                    <img src="email.png" alt="Email">
+                    <span>mohwasalt@gmail.com</span>
+                </div>
+
+                <div class="contact-item">
+                    <img src="adresse.png" alt="Adresse">
+                    <span>17 rue Jeanne d’arc</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIED DE PAGE avec liens utiles -->
+    <footer>
+        <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="plan-du-site.html">Plan du site</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p>© 2024 - Tous droits réservés.</p>
+    </footer>
+
+    <!-- Script pour gérer le menu responsive -->
+    <script src="menu.js"></script>
+
 </body>
 </html>
