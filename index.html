@@ -1,69 +1,300 @@
-<!DOCTYPE html><!-- DISCLAMERRRRRRR/CE CITE A ETE FAIT PAR UN NOOB/DESOLE D'AVANCE DES ERREURES ABERRANTES/BONNE LECTURE !!! -->
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Accueil</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers la feuille de styles CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio de Waseem Altaweel — systèmes, réseaux, cybersécurité, infrastructure, déploiement, projets techniques et veille technologique."
+  />
+  <title>Altaweel Waseem — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-    <!-- En-tête avec navigation fixe -->
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo Altaweel Waseem">
-            <span class="brand-text">BE DIFFERENT</span> <!-- Texte du logo, slogan de la marque -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo Altaweel Waseem" />
+      <div class="logo-text">
+        <span class="brand-name">Altaweel Waseem</span>
+        <span class="brand-tagline">Systèmes · Réseaux · Cybersécurité</span>
+      </div>
+    </div>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="about.html">Profil</a></li>
+        <li><a href="projets-pro.html">Projets Pro</a></li>
+        <li><a href="projets-perso.html">Projets Perso</a></li>
+        <li><a href="veille-technologique.html">Veille Tech</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-home">
+      <div class="overlay"></div>
+
+      <div class="hero-content">
+        <p class="kicker">Portfolio professionnel</p>
+        <h1>
+          Waseem Altaweel
+        </h1>
+        <p class="hero-subtitle">
+          Étudiant en BTS SIO SISR et profil technique orienté infrastructure,
+          systèmes, réseaux et cybersécurité, avec une vraie appétence pour le
+          terrain, le déploiement, l’administration et l’amélioration continue.
+        </p>
+
+        <div class="hero-actions">
+          <a href="about.html" class="btn btn-primary">Découvrir mon profil</a>
+          <a href="projets-pro.html" class="btn btn-secondary">Voir mes réalisations</a>
         </div>
 
-        <!-- Menu burger pour la version mobile -->
-        <div class="menu-toggle">&#9776;</div> <!-- Code Unicode pour l'icône du menu -->
+        <div class="hero-highlights">
+          <article class="highlight-card">
+            <h2>Infrastructure</h2>
+            <p>
+              Déploiement, organisation, maintien en condition opérationnelle,
+              mise en service et amélioration d’environnements techniques.
+            </p>
+          </article>
 
-        <!-- Menu principal de navigation -->
-        <nav class="nav-menu">
-            <ul>
-                <li class="nav-btn"><a href="about.html">Qui suis-je ?</a></li>
-                <li class="nav-btn"><a href="projets-pro.html">Projets Pro</a></li>
-                <li class="nav-btn"><a href="projets-perso.html">Projets Perso</a></li>
-                <li class="nav-btn contact"><a href="contact.html">Contact</a></li>    
-            </ul>
-        </nav>
-    </header>
-    
-    <!-- Section principale avec une image de fond et une présentation -->
-    <main>
-        <section class="hero">
-            <div class="overlay"></div> <!-- Overlay pour assombrir l'image de fond et améliorer la lisibilité -->
-            <h1><p>Bienvenue dans le Portfolio de</p>Altaweel Waseem !</h1>
-        </section>
-        
-        <!-- Section pour navigation rapide entre les différentes pages du site -->
-        <section class="navigation-accueil">
-            <div class="nav-item">
-                <img src="photo cloud serveur.jpg" alt="Projets Professionnels">
-                <a href="projets-pro.html" class="btn">Projets Pro</a>
-            </div>
-            <div class="nav-item">
-                <img src="photo de profile.png" alt="Photo de Profil" class="profile">
-                <a href="about.html" class="btn">Qui suis-je ?</a>
-            </div>
-            <div class="nav-item">
-                <img src="photo voiture rouge.png" alt="Projets Personnels">
-                <a href="projets-perso.html" class="btn">Projets Perso</a>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Pied de page avec liens utiles -->
-    <footer>
-        <ul>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="plan-du-site.html">Plan du site</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <p>© 2024 - Tous droits réservés.</p>
-    </footer>
+          <article class="highlight-card">
+            <h2>Réseaux & systèmes</h2>
+            <p>
+              Configuration, administration, résolution d’incidents, supervision
+              et structuration d’environnements fiables et lisibles.
+            </p>
+          </article>
 
-    <!-- Script JavaScript pour gérer le menu responsive -->
-    <script src="menu.js"></script>
+          <article class="highlight-card">
+            <h2>Cybersécurité</h2>
+            <p>
+              Sensibilisation aux risques, logique de durcissement, veille
+              technique et vision orientée sécurité opérationnelle.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-section">
+      <div class="section-heading">
+        <p class="kicker">Positionnement</p>
+        <h2>Un profil technique concret, polyvalent et orienté terrain</h2>
+      </div>
+
+      <div class="intro-grid">
+        <article class="glass-card">
+          <h3>Ce que je mets en avant</h3>
+          <p>
+            Je cherche à construire un profil crédible, solide et utile en
+            environnement professionnel, avec une vraie capacité à comprendre
+            l’existant, intervenir proprement, déployer, corriger et améliorer.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Ma logique de travail</h3>
+          <p>
+            J’accorde une grande importance à la fiabilité, à la lisibilité
+            technique, à la sécurité, à la documentation et à la qualité
+            d’exécution, aussi bien sur le terrain qu’au niveau de
+            l’administration.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Mon objectif</h3>
+          <p>
+            Continuer à évoluer vers des missions à plus forte valeur ajoutée en
+            systèmes, réseaux, cybersécurité et infrastructure, avec une montée
+            progressive en responsabilité et en impact.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="quick-access-section">
+      <div class="section-heading">
+        <p class="kicker">Navigation rapide</p>
+        <h2>Les sections clés du portfolio</h2>
+      </div>
+
+      <div class="quick-access-grid">
+        <article class="nav-card">
+          <img src="photo cloud serveur.jpg" alt="Illustration infrastructure et projets professionnels" />
+          <div class="nav-card-content">
+            <h3>Projets professionnels</h3>
+            <p>
+              Réalisations menées dans un cadre concret : interventions,
+              déploiements, remise en conformité, organisation technique et
+              amélioration d’infrastructures.
+            </p>
+            <a href="projets-pro.html" class="btn btn-primary">Voir les projets pro</a>
+          </div>
+        </article>
+
+        <article class="nav-card">
+          <img src="photo de profile.png" alt="Photo de profil de Waseem Altaweel" />
+          <div class="nav-card-content">
+            <h3>Profil</h3>
+            <p>
+              Mon parcours, mon positionnement, mes compétences, ma logique de
+              progression et ce que je peux apporter dans un environnement
+              technique exigeant.
+            </p>
+            <a href="about.html" class="btn btn-primary">Découvrir mon profil</a>
+          </div>
+        </article>
+
+        <article class="nav-card">
+          <img src="photo voiture rouge.png" alt="Illustration projets personnels" />
+          <div class="nav-card-content">
+            <h3>Projets personnels</h3>
+            <p>
+              Projets menés en autonomie pour approfondir mes compétences,
+              expérimenter, comprendre davantage les outils et développer ma
+              polyvalence.
+            </p>
+            <a href="projets-perso.html" class="btn btn-primary">Voir les projets perso</a>
+          </div>
+        </article>
+
+        <article class="nav-card">
+          <img src="kali-linux.jpg" alt="Illustration veille technologique et cybersécurité" />
+          <div class="nav-card-content">
+            <h3>Veille technologique</h3>
+            <p>
+              Une sélection de sujets liés à la cybersécurité et aux menaces
+              actuelles, avec une lecture orientée impact réel, risques et
+              réponses défensives.
+            </p>
+            <a href="veille-technologique.html" class="btn btn-primary">Voir la veille</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <div class="section-heading">
+        <p class="kicker">Compétences</p>
+        <h2>Des bases techniques concrètes à mettre au service du réel</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Systèmes</h3>
+          <ul>
+            <li>Administration de postes et serveurs</li>
+            <li>Maintenance et résolution d’incidents</li>
+            <li>Configuration et mise en service</li>
+            <li>Suivi du bon fonctionnement</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Réseaux</h3>
+          <ul>
+            <li>Architecture et organisation réseau</li>
+            <li>Brassage, baie, connectivité, Wi-Fi</li>
+            <li>Diagnostic et correction de problèmes</li>
+            <li>Recherche de stabilité et de lisibilité</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Cybersécurité</h3>
+          <ul>
+            <li>Veille technologique et lecture des risques</li>
+            <li>Durcissement et logique de sécurisation</li>
+            <li>Sensibilité aux accès et aux privilèges</li>
+            <li>Approche défensive et pragmatique</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Méthode</h3>
+          <ul>
+            <li>Rigueur technique</li>
+            <li>Autonomie et esprit d’analyse</li>
+            <li>Documentation et logique structurée</li>
+            <li>Volonté d’amélioration continue</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="value-section">
+      <div class="section-heading">
+        <p class="kicker">Valeur ajoutée</p>
+        <h2>Ce que ce portfolio doit faire ressortir</h2>
+      </div>
+
+      <div class="value-grid">
+        <article class="glass-card">
+          <h3>Des réalisations concrètes</h3>
+          <p>
+            Pas seulement des notions théoriques : des interventions visibles,
+            des projets menés, des environnements manipulés et une vraie logique
+            d’exécution.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Une montée en crédibilité</h3>
+          <p>
+            Le but est de montrer un profil en progression, déjà sérieux,
+            capable d’apprendre vite, de s’adapter et de contribuer utilement à
+            des missions techniques.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Une image professionnelle forte</h3>
+          <p>
+            Ce site doit inspirer confiance, donner une impression de rigueur,
+            de modernité et de potentiel, aussi bien à un recruteur qu’à une
+            école ou à un responsable technique.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-card">
+        <p class="kicker">Aller plus loin</p>
+        <h2>Découvrir mon profil, mes projets et ma vision technique</h2>
+        <p>
+          Ce portfolio regroupe l’essentiel de mon parcours, de mes réalisations
+          et de mes centres d’intérêt techniques. Il a pour but de refléter un
+          profil sérieux, évolutif et tourné vers des environnements exigeants.
+        </p>
+
+        <div class="cta-actions">
+          <a href="about.html" class="btn btn-primary">Profil</a>
+          <a href="projets-pro.html" class="btn btn-secondary">Projets Pro</a>
+          <a href="veille-technologique.html" class="btn btn-secondary">Veille Tech</a>
+          <a href="contact.html" class="btn btn-secondary">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+      <li><a href="plan-du-site.html">Plan du site</a></li>
+      <li><a href="veille-technologique.html">Veille Tech</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>© 2026 Altaweel Waseem — Portfolio</p>
+  </footer>
+
+  <script src="menu.js"></script>
 </body>
 </html>
