@@ -147,18 +147,9 @@ h3 {
   font-size: clamp(20px, 2.2vw, 30px);
   line-height: 1.2;
   font-weight: 700;
-  letter-spacing: -0.015em;
-  color: var(--ink-900);
-  margin-bottom: 32px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid rgba(0, 168, 255, 0.2);
 }
 
-/* ===================== UTILITAIRES ===================== */
-.container {
-  width: var(--container);
-  margin-inline: auto;
-}
+p { color: var(--text-2); font-size: clamp(16px, 1.05vw, 19px); }
 
 .center { text-align: center; }
 
@@ -260,25 +251,9 @@ header {
 
 .brand-text {
   font-weight: 800;
-  color: var(--ink-1000);
-  letter-spacing: -0.01em;
-}
-
-/* NAVIGATION */
-nav .nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-nav .nav-menu li a {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: var(--radius-pill);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink-700);
-  transition: color var(--t-fast), background var(--t-fast);
+  letter-spacing: -0.02em;
+  font-size: clamp(18px, 1.2vw, 22px);
+  color: #f4f7ff;
 }
 
 nav .nav-menu li a:hover {
