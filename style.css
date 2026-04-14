@@ -1430,7 +1430,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(10, 18, 45, 0.45);
+  background: rgba(249, 250, 253, 0.70);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--glass-border);
@@ -1473,9 +1473,8 @@ header nav .nav-menu li a {
 }
 
 header nav .nav-menu li a:hover {
-  color: #fff;
-  background: rgba(138, 124, 255, 0.18);
-  box-shadow: 0 0 0 1px rgba(179, 231, 255, 0.22) inset;
+  color: var(--ink-1000);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 main,
@@ -1502,14 +1501,7 @@ main,
   border-radius: var(--radius-lg);
   padding: 14px;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(16, 28, 70, 0.35);
-  transition: transform var(--t-fast), box-shadow var(--t-fast), border-color var(--t-fast);
-}
-
-.nav-item:hover {
-  transform: translateY(-4px);
-  border-color: rgba(179, 231, 255, 0.55);
-  box-shadow: 0 18px 40px rgba(16, 28, 70, 0.48), 0 0 20px rgba(53, 217, 255, 0.24);
+  box-shadow: var(--shadow-soft);
 }
 
 .nav-item img {
@@ -1556,14 +1548,7 @@ main,
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: 16px;
-  box-shadow: 0 12px 30px rgba(16, 28, 70, 0.35);
-  transition: transform var(--t-fast), box-shadow var(--t-fast), border-color var(--t-fast);
-}
-
-.projects-container .project:hover {
-  transform: translateY(-5px);
-  border-color: rgba(179, 231, 255, 0.55);
-  box-shadow: 0 18px 42px rgba(16, 28, 70, 0.5), 0 0 18px rgba(138, 124, 255, 0.26);
+  box-shadow: var(--shadow-soft);
 }
 
 .projects-container .project img {
