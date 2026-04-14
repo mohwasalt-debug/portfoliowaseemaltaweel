@@ -1390,3 +1390,217 @@ footer {
   .bilan-grid     { grid-template-columns: 1fr; }
   .timeline-item  { border-radius: var(--radius-md); }
 }
+
+/* ===================== LEGACY MARKUP COMPAT ===================== */
+/* Permet de styliser les anciennes structures HTML des pages existantes. */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(249, 250, 253, 0.70);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 24px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  height: 44px;
+  width: auto;
+  border-radius: 10px;
+}
+
+header nav .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+header nav .nav-menu li a {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-700);
+}
+
+header nav .nav-menu li a:hover {
+  color: var(--ink-1000);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+main,
+.contact-section,
+.site-map-section,
+.mentions-legales,
+.projects-section,
+.about-section {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.navigation-accueil {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 36px 0 70px;
+}
+
+.nav-item {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.nav-item img {
+  border-radius: var(--radius-md);
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 48px 0 20px;
+}
+
+.intro h1 { margin-bottom: 10px; }
+.intro p { margin-bottom: 14px; }
+
+.experience,
+.formation,
+.competences {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+  margin: 18px 0;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 22px;
+  padding-bottom: 60px;
+}
+
+.projects-container .project {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.projects-container .project img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+}
+
+.contact-section {
+  padding: 40px 0 70px;
+}
+
+.contact-form-info {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.contact-form,
+.contact-info {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.input-group img,
+.contact-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.80);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.site-map-container img {
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  margin: 24px auto;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+footer ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .navigation-accueil,
+  .projects-container,
+  .contact-form-info,
+  .presentation {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+}
