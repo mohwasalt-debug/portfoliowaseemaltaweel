@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets Personnels - Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers la feuille de styles CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Projets personnels de Waseem Altaweel — automobile, montage PC, environnements de test en cybersécurité et photographie."
+  />
+  <title>Projets personnels — Altaweel Waseem</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo Altaweel Waseem" />
+      <div class="logo-text">
+        <span class="brand-name">Altaweel Waseem</span>
+        <span class="brand-tagline">Infrastructure · Systèmes · Réseaux · Cybersécurité</span>
+      </div>
+    </div>
 
-    <!-- HEADER avec logo et navigation -->
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo Altaweel Waseem">
-            <span class="brand-text">BE DIFFERENT</span>
-        </div>
-        
-        <!-- Bouton menu burger pour affichage mobile -->
-        <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+    <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
 
-        <nav>
-            <ul class="nav-menu">
-                <li class="nav-btn"><a href="index.html">Accueil</a></li>
-                <li class="nav-btn"><a href="about.html">Qui suis-je ?</a></li>
-                <li class="nav-btn"><a href="projets-pro.html">Projets Pro</a></li>
-                <li class="nav-btn contact"><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">Profil</a></li>
+        <li><a href="projets-pro.html">Projets Pro</a></li>
+        <li><a href="projets-perso.html" class="active">Projets Perso</a></li>
+        <li><a href="veille-technologique.html">Veille Tech</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- SECTION PROJETS PERSONNELS -->
-    <main class="projects-section">
-        <h1>Mes Projets Personnels</h1>
-        <p>Une petite sélection de projets personnels sur lesquels j’ai travaillé, mêlant passion et rentabilité...</p>
-        
-        <section class="projects-container">
-            <div class="project">
-                <img src="mx5-renovation.jpeg" alt="Rénovation complète d'une Mazda MX-5 MK2">
-                <h2>Rénovation d'une Mazda MX-5 MK2</h2>
-                <p>Projet de restauration complet pour une revente : révision moteur, rénovation de l'intérieur, travaux de carrosserie (soudures, peinture et traitement anti-rouille) et amélioration des performances.</p>
-            </div>
+  <main class="projects-section">
+    <p class="kicker">Initiatives personnelles</p>
+    <h1>Projets personnels</h1>
+    <p>
+      Cette sélection regroupe des projets menés en autonomie, à la croisée de la
+      technique, de la curiosité et de la progression personnelle. Ils reflètent
+      ma capacité à apprendre par la pratique, à mener un projet jusqu’au bout et
+      à développer des compétences concrètes en dehors du cadre scolaire.
+    </p>
 
-            <div class="project">
-                <img src="pc-build.jpg" alt="Montage et optimisation d'un PC sur mesure">
-                <h2>Construction d’un PC</h2>
-                <p>Montage, installation et optimisation d'un PC pour le gaming et mon travail.</p>
-            </div>
+    <section class="projects-container">
+      <article class="project">
+        <img src="mx5-renovation.jpeg" alt="Rénovation complète d'une Mazda MX-5 MK2" />
+        <h2>Rénovation complète d’une Mazda MX-5 MK2</h2>
+        <p>
+          Projet de restauration mené dans une logique à la fois technique et
+          méthodique : révision mécanique, remise en état de l’intérieur,
+          travaux de carrosserie, traitement de la corrosion et amélioration
+          globale du véhicule en vue d’une revalorisation cohérente.
+        </p>
+      </article>
 
-            <div class="project">
-                <img src="kali-linux.jpg" alt="Apprentissage et tests sur Kali Linux">
-                <h2>Apprentissage de Kali Linux</h2>
-                <p>Exploration de Kali Linux, mise en place d’environnements de test (achat d'une clé AWUS A6000 permettant l'injection SQL jusqu'au sniffing à plus de 500m) et apprentissage des bases en cybersécurité et pentesting.</p>
-            </div>
+      <article class="project">
+        <img src="pc-build.jpg" alt="Montage et optimisation d'un PC sur mesure" />
+        <h2>Montage et optimisation d’un PC sur mesure</h2>
+        <p>
+          Sélection des composants, assemblage complet, installation du système,
+          réglages logiciels et optimisation générale de la machine pour obtenir
+          une configuration à la fois performante, stable et adaptée à mes usages.
+        </p>
+      </article>
 
-            <div class="project">
-                <img src="photographie-evenement.jpg" alt="Reportage photo lors d'événements">
-                <h2>Photographie d’événements</h2>
-                <p>Intéressé par la photographie, j'ai investi dans un reflex numérique pour capturer des moments lors d'événements, notamment pour des associations sportives.</p>
-            </div>
-        </section>
-    </main>
+      <article class="project">
+        <img src="kali-linux.jpg" alt="Environnement de test et apprentissage en cybersécurité" />
+        <h2>Environnements de test en cybersécurité</h2>
+        <p>
+          Mise en place d’environnements dédiés à l’apprentissage des bases de la
+          cybersécurité, du réseau et du pentesting dans un cadre de laboratoire.
+          L’objectif est de mieux comprendre les mécanismes d’attaque, les surfaces
+          d’exposition et les logiques de défense, de manière structurée et responsable.
+        </p>
+      </article>
 
-    <!-- FOOTER avec liens utiles -->
-    <footer>
-        <ul>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="plan-du-site.html">Plan du site</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <p>© 2024 - Tous droits réservés.</p>
-    </footer> 
+      <article class="project">
+        <img src="photographie-evenement.jpg" alt="Photographie d'événements" />
+        <h2>Photographie d’événements</h2>
+        <p>
+          Développement d’un intérêt concret pour la photographie à travers
+          l’acquisition de matériel dédié et la réalisation de prises de vue lors
+          d’événements, notamment dans un cadre associatif et sportif.
+        </p>
+      </article>
+    </section>
+  </main>
 
-    <!-- Script JavaScript pour gérer le menu burger -->
-    <script src="menu.js"></script>
+  <footer>
+    <ul>
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+      <li><a href="plan-du-site.html">Plan du site</a></li>
+      <li><a href="veille-technologique.html">Veille Tech</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>© 2026 Altaweel Waseem — Portfolio</p>
+  </footer>
 
+  <script src="menu.js"></script>
 </body>
 </html>
