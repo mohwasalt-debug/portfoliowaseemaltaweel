@@ -1,84 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos - Portfolio</title>
-    <link rel="stylesheet" href="../styles/about.css"> <!-- Lien vers la feuille de styles CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil — Altaweel Waseem</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo Altaweel Waseem">
+      <span class="brand-text">Altaweel Waseem</span>
+    </div>
+    <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets-pro.html">Projets Pro</a></li>
+        <li><a href="projets-perso.html">Projets Perso</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- HEADER avec logo et navigation -->
-    <header>
-        <div class="logo">
-            <img src="../img/logo.png" alt="Logo Altaweel Waseem">
-            <span class="brand-text">BE DIFFERENT</span>
+  <main class="about-section">
+    <section class="presentation">
+      <img src="photo de profile.png" alt="Photo de profil" class="profile-pic">
+      <div class="intro">
+        <p class="kicker">Profil professionnel</p>
+        <h1>Altaweel Waseem</h1>
+        <p>Technicien informatique orienté infrastructure, support avancé et cybersécurité opérationnelle. J’interviens sur le terrain avec méthode, rigueur et sens du service pour garantir des environnements stables et performants.</p>
+        <div class="cta-row">
+          <a href="cv.pdf" class="btn" download="CV_Altaweel_Waseem.pdf">Télécharger mon CV</a>
+          <a href="contact.html" class="btn btn-secondary">Discuter d'une mission</a>
         </div>
-        <button class="menu-toggle">&#9776;</button> <!-- Bouton pour le menu burger en mobile -->
-        <nav>
-            <ul class="nav-menu"> <!-- Menu de navigation -->
-                <li class="nav-btn"><a href="index.html">Accueil</a></li>
-                <li class="nav-btn"><a href="projets-pro.html">Projets Pro</a></li>
-                <li class="nav-btn"><a href="projets-perso.html">Projets Perso</a></li>
-                <li class="nav-btn contact"><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+      </div>
+    </section>
 
-    <!-- SECTION À PROPOS -->
-    <main class="about-section">
-        <section class="presentation">
-            <img src="../img/photo de profile.png" alt="Photo de profil" class="profile-pic">
-            <div class="intro">
-                <h1>Altaweel Waseem</h1>
-                <p>Technicien Informatique passionné, actuellement en poste chez <a href="https://www.mb-informatique.fr/" target="_blank">MB Informatique</a>. Spécialiste en maintenance, réseaux et cybersécurité.</p>
-                <a href="../documents/cv.pdf" class="btn" download="CV_Altaweel_Waseem.pdf">Télécharger mon CV</a>
-            </div>
-        </section>
+    <section class="experience">
+      <h2>Expérience professionnelle</h2>
+      <div class="job">
+        <h3>Technicien Informatique — MB Informatique</h3>
+        <p>Support utilisateurs, maintenance systèmes, interventions réseau, préparation et déploiement de postes, diagnostic d’incidents et documentation des actions pour assurer un suivi fiable.</p>
+      </div>
+    </section>
 
-        <!-- EXPÉRIENCES PROFESSIONNELLES -->
-        <section class="experience">
-            <h2>Expérience Professionnelle</h2>
-            <div class="job">
-                <h3>Technicien Informatique - <a href="https://www.mb-informatique.fr/" target="_blank">MB Informatique</a></h3>
-                <p>Responsable de la maintenance des systèmes, gestion des réseaux et support client.</p>
-            </div>
-        </section>
+    <section class="formation">
+      <h2>Formation</h2>
+      <div class="education">
+        <h3>BTS SIO — Services Informatiques aux Organisations</h3>
+        <p>Parcours orienté administration systèmes et réseaux, cybersécurité et bonnes pratiques d’exploitation IT.</p>
+      </div>
+    </section>
 
-        <!-- FORMATION -->
-        <section class="formation">
-            <h2>Formation</h2>
-            <div class="education">
-                <h3>BTS SIO - Services Informatiques aux Organisations</h3>
-                <p>Spécialisation en réseaux et cybersécurité.</p>
-            </div>
-        </section>
+    <section class="competences">
+      <h2>Compétences clés</h2>
+      <ul>
+        <li>Systèmes Windows / Linux</li>
+        <li>Réseaux LAN, Wi-Fi, brassage</li>
+        <li>Cybersécurité opérationnelle</li>
+        <li>Déploiement & maintenance poste</li>
+        <li>Diagnostic et résolution d’incidents</li>
+        <li>Documentation et support utilisateur</li>
+      </ul>
+    </section>
+  </main>
 
-        <!-- COMPÉTENCES -->
-        <section class="competences">
-            <h2>Compétences</h2>
-            <ul>
-                <li>Maintenance Informatique</li>
-                <li>Administration Réseaux</li>
-                <li>Cybersécurité</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Windows / Linux</li>
-            </ul>
-        </section>
-    </main>
+  <footer>
+    <ul>
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+      <li><a href="plan-du-site.html">Plan du site</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>© 2026 Altaweel Waseem — Portfolio</p>
+  </footer>
 
-    <!-- FOOTER avec liens utiles -->
-    <footer>
-        <ul>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="plan-du-site.html">Plan du site</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <p>© 2024 - Tous droits réservés.</p>
-    </footer>
-
-    <!-- Script pour gérer le menu responsive -->
-    <script src="../js/menu.js"></script>
-
+  <script src="menu.js"></script>
 </body>
 </html>
