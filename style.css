@@ -1,301 +1,920 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Portfolio de Waseem Altaweel, étudiant en BTS SIO option SISR. Parcours, réalisations professionnelles, projets personnels, veille technologique et contact."
-  />
-  <title>Altaweel Waseem — Accueil</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="logo">
-      <img src="logo.png" alt="Logo Altaweel Waseem" />
-      <div class="logo-text">
-        <span class="brand-name">Altaweel Waseem</span>
-        <span class="brand-tagline">BTS SIO SISR · Systèmes · Réseaux · Cybersécurité</span>
-      </div>
-    </div>
+/* =========================================================
+   PORTFOLIO — ALTAWEEL WASEEM
+   Version corrigée compatible index.html + about.html
+   ========================================================= */
 
-    <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-    <nav aria-label="Navigation principale">
-      <ul class="nav-menu">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="about.html">Profil</a></li>
-        <li><a href="realisations-professionnelles.html">Réalisations professionnelles</a></li>
-        <li><a href="projets-perso.html">Projets personnels</a></li>
-        <li><a href="veille-technologique.html">Veille technologique</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+:root {
+  --bg-0: #07111f;
+  --bg-1: #0d1830;
+  --bg-2: #152448;
+  --bg-3: #1b2f5f;
 
-  <main>
-    <section class="hero hero-home">
-      <div class="hero-content">
-        <p class="kicker">Portfolio BTS SIO</p>
-        <h1>Bienvenue sur mon portfolio</h1>
-        <p class="hero-subtitle">
-          Je m’appelle Waseem Altaweel. Je suis étudiant en BTS SIO option SISR,
-          avec un intérêt particulier pour les systèmes, les réseaux, la cybersécurité
-          et les environnements techniques concrets. Ce site présente mon parcours,
-          mes réalisations, mes projets et ma veille technologique.
-        </p>
+  --text-1: #f7faff;
+  --text-2: #d8e4ff;
+  --text-3: #adbedf;
+  --text-4: #7f90b5;
 
-        <div class="hero-actions">
-          <a href="about.html" class="btn btn-primary">Voir mon profil</a>
-          <a href="realisations-professionnelles.html" class="btn btn-secondary">Voir mes réalisations</a>
-          <a href="CV_Altaweel_Waseem (3).pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
-          <a
-            href="https://linkedin.com/in/waseem-altaweel-830219311"
-            class="btn btn-secondary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
+  --accent-1: #7cd9ff;
+  --accent-2: #a88cff;
+  --accent-3: #7effc4;
 
-        <div class="hero-highlights">
-          <article class="highlight-card">
-            <h2>BTS SIO option SISR</h2>
-            <p>
-              Ma formation est orientée vers les solutions d’infrastructure,
-              systèmes et réseaux. Elle me permet de développer une base solide
-              en administration, en services réseau et en sécurité.
-            </p>
-          </article>
+  --glass-border: rgba(190, 220, 255, 0.22);
+  --glass-border-strong: rgba(190, 220, 255, 0.34);
+  --glass-blur: blur(20px) saturate(150%);
 
-          <article class="highlight-card">
-            <h2>Expérience professionnelle</h2>
-            <p>
-              En parallèle de mon parcours, j’évolue chez MB Informatique,
-              où je découvre des problématiques concrètes liées au déploiement,
-              au support, aux environnements réseau et à l’organisation technique.
-            </p>
-          </article>
+  --shadow-soft: 0 10px 30px rgba(4, 10, 24, 0.22);
+  --shadow-float: 0 18px 50px rgba(4, 10, 24, 0.34);
+  --shadow-glow: 0 0 28px rgba(124, 217, 255, 0.10);
 
-          <article class="highlight-card">
-            <h2>Suite de mon parcours</h2>
-            <p>
-              Mon objectif est de poursuivre vers un cycle ingénieur, tout en
-              continuant à progresser sur des sujets liés à l’infrastructure,
-              aux réseaux, à la cybersécurité et à l’informatique industrielle.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+  --radius-s: 12px;
+  --radius-m: 18px;
+  --radius-l: 26px;
+  --radius-xl: 34px;
+  --radius-pill: 999px;
 
-    <section class="intro-section">
-      <div class="section-heading">
-        <p class="kicker">Présentation</p>
-        <h2>Le but de ce portfolio</h2>
-      </div>
+  --container: min(1180px, calc(100% - 40px));
+  --header-width: min(1240px, calc(100% - 24px));
 
-      <div class="intro-grid">
-        <article class="glass-card">
-          <h3>Mon parcours</h3>
-          <p>
-            Cette première partie permet de comprendre qui je suis, d’où je viens,
-            et dans quelle direction je souhaite évoluer dans le domaine informatique.
-          </p>
-        </article>
+  --space-1: 8px;
+  --space-2: 14px;
+  --space-3: 22px;
+  --space-4: 34px;
+  --space-5: 54px;
+  --space-6: 88px;
 
-        <article class="glass-card">
-          <h3>Mes réalisations</h3>
-          <p>
-            J’y rassemble les travaux et situations professionnelles les plus utiles
-            pour montrer ma progression, ma manière de travailler et les compétences
-            que j’ai développées pendant ma formation.
-          </p>
-        </article>
+  --t-fast: 0.2s ease;
+  --t-med: 0.35s ease;
 
-        <article class="glass-card">
-          <h3>Ma veille</h3>
-          <p>
-            La veille technologique me permet de suivre des sujets qui m’intéressent,
-            d’améliorer ma culture technique et de garder un regard actif sur
-            l’évolution du domaine.
-          </p>
-        </article>
-      </div>
-    </section>
+  --grad-bg:
+    linear-gradient(160deg, var(--bg-0) 0%, var(--bg-1) 30%, var(--bg-2) 68%, var(--bg-3) 100%);
+  --grad-card:
+    linear-gradient(145deg, rgba(255,255,255,0.14), rgba(255,255,255,0.05));
+}
 
-    <section class="quick-access-section">
-      <div class="section-heading">
-        <p class="kicker">Accès rapide</p>
-        <h2>Les pages principales</h2>
-      </div>
+/* ========================= RESET ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-      <div class="quick-access-grid">
-        <article class="nav-card">
-          <img src="photo de profile.png" alt="Photo de profil de Waseem Altaweel" />
-          <div class="nav-card-content">
-            <h3>Profil</h3>
-            <p>
-              Une présentation de mon parcours, de ma formation, de mon projet
-              professionnel, de mon expérience et de mes compétences.
-            </p>
-            <a href="about.html" class="btn btn-primary">Accéder au profil</a>
-          </div>
-        </article>
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
-        <article class="nav-card">
-          <img src="photo cloud serveur.jpg" alt="Illustration d'une infrastructure informatique" />
-          <div class="nav-card-content">
-            <h3>Réalisations professionnelles</h3>
-            <p>
-              Cette page regroupe les réalisations importantes de mon parcours,
-              notamment celles liées à ma formation et à mes travaux techniques.
-            </p>
-            <a href="realisations-professionnelles.html" class="btn btn-primary">Voir les réalisations</a>
-          </div>
-        </article>
+html {
+  scroll-behavior: smooth;
+}
 
-        <article class="nav-card">
-          <img src="photo voiture rouge.png" alt="Illustration des projets personnels" />
-          <div class="nav-card-content">
-            <h3>Projets personnels</h3>
-            <p>
-              Des projets réalisés en autonomie pour approfondir certains sujets,
-              expérimenter davantage et progresser de manière plus personnelle.
-            </p>
-            <a href="projets-perso.html" class="btn btn-primary">Voir les projets</a>
-          </div>
-        </article>
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-2);
+  background:
+    radial-gradient(900px 500px at -10% -10%, rgba(124, 217, 255, 0.18), transparent 60%),
+    radial-gradient(800px 480px at 110% 0%, rgba(168, 140, 255, 0.18), transparent 62%),
+    radial-gradient(850px 500px at 50% 120%, rgba(126, 255, 196, 0.08), transparent 64%),
+    var(--grad-bg);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
 
-        <article class="nav-card">
-          <img src="kali-linux.jpg" alt="Illustration de veille technologique" />
-          <div class="nav-card-content">
-            <h3>Veille technologique</h3>
-            <p>
-              Une sélection de sujets de veille en lien avec la cybersécurité,
-              les réseaux et l’actualité technique qui m’intéressent.
-            </p>
-            <a href="veille-technologique.html" class="btn btn-primary">Consulter la veille</a>
-          </div>
-        </article>
-      </div>
-    </section>
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: -1;
+}
 
-    <section class="skills-section">
-      <div class="section-heading">
-        <p class="kicker">Formation</p>
-        <h2>Le BTS SIO et l’option SISR</h2>
-      </div>
+body::before {
+  width: 360px;
+  height: 360px;
+  top: 8%;
+  left: -90px;
+  background: rgba(124, 217, 255, 0.14);
+}
 
-      <div class="skills-grid">
-        <article class="skill-card">
-          <h3>Le BTS SIO</h3>
-          <ul>
-            <li>Une formation orientée vers les services informatiques</li>
-            <li>Un cadre professionnalisant avec projets, veille et réalisations</li>
-            <li>Une progression fondée sur la technique, la méthode et la pratique</li>
-            <li>Une formation pensée pour préparer à la poursuite d’études ou à l’emploi</li>
-          </ul>
-        </article>
+body::after {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  bottom: 2%;
+  background: rgba(168, 140, 255, 0.16);
+}
 
-        <article class="skill-card">
-          <h3>Option SISR</h3>
-          <ul>
-            <li>Spécialisation en solutions d’infrastructure, systèmes et réseaux</li>
-            <li>Administration de services et d’environnements techniques</li>
-            <li>Configuration, maintenance et sécurisation des services réseau</li>
-            <li>Approche concrète des besoins d’exploitation et de continuité</li>
-          </ul>
-        </article>
+main {
+  width: 100%;
+}
 
-        <article class="skill-card">
-          <h3>Ce que j’y développe</h3>
-          <ul>
-            <li>Des bases solides en systèmes, réseaux et cybersécurité</li>
-            <li>Des réflexes de diagnostic, de rigueur et de documentation</li>
-            <li>Une meilleure compréhension des environnements professionnels</li>
-            <li>Une progression régulière à travers les projets et les réalisations</li>
-          </ul>
-        </article>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-        <article class="skill-card">
-          <h3>Mon orientation</h3>
-          <ul>
-            <li>Infrastructure</li>
-            <li>Systèmes et réseaux</li>
-            <li>Cybersécurité</li>
-            <li>Évolution vers un cycle ingénieur</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-    <section class="value-section">
-      <div class="section-heading">
-        <p class="kicker">Repères</p>
-        <h2>Quelques points importants sur mon parcours</h2>
-      </div>
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-      <div class="value-grid">
-        <article class="glass-card">
-          <h3>Expérience actuelle</h3>
-          <p>
-            Depuis 2024, je travaille chez MB Informatique, ce qui me permet
-            de gagner en expérience sur des environnements réels et de mieux
-            comprendre les attentes du terrain. :contentReference[oaicite:1]{index=1}
-          </p>
-        </article>
+/* ========================= TYPO ========================= */
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text-1);
+  letter-spacing: -0.03em;
+}
 
-        <article class="glass-card">
-          <h3>Formation en cours</h3>
-          <p>
-            Je suis actuellement en BTS SIO option SISR au CCI Campus Strasbourg,
-            avec une poursuite d’études visée en cycle ingénieur. :contentReference[oaicite:2]{index=2}
-          </p>
-        </article>
+h1 {
+  font-size: clamp(40px, 7vw, 78px);
+  line-height: 1.04;
+  font-weight: 800;
+}
 
-        <article class="glass-card">
-          <h3>Certification</h3>
-          <p>
-            Je prépare actuellement la certification Cisco CCNA, en cohérence avec
-            mon intérêt pour les réseaux et l’infrastructure. :contentReference[oaicite:3]{index=3}
-          </p>
-        </article>
-      </div>
-    </section>
+h2 {
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.12;
+  font-weight: 750;
+}
 
-    <section class="cta-section">
-      <div class="cta-card">
-        <p class="kicker">Continuer</p>
-        <h2>Découvrir la suite du portfolio</h2>
-        <p>
-          La suite du site permet d’aller plus loin dans mon parcours, mes réalisations,
-          mes projets personnels et ma veille technologique.
-        </p>
+h3 {
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.2;
+  font-weight: 700;
+}
 
-        <div class="cta-actions">
-          <a href="about.html" class="btn btn-primary">Profil</a>
-          <a href="realisations-professionnelles.html" class="btn btn-secondary">Réalisations professionnelles</a>
-          <a href="projets-perso.html" class="btn btn-secondary">Projets personnels</a>
-          <a href="veille-technologique.html" class="btn btn-secondary">Veille technologique</a>
-          <a href="contact.html" class="btn btn-secondary">Contact</a>
-        </div>
-      </div>
-    </section>
-  </main>
+p {
+  margin: 0;
+  color: var(--text-2);
+  font-size: clamp(16px, 1.05vw, 18px);
+}
 
-  <footer>
-    <ul>
-      <li><a href="mentions-legales.html">Mentions légales</a></li>
-      <li><a href="plan-du-site.html">Plan du site</a></li>
-      <li><a href="veille-technologique.html">Veille technologique</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <p>© 2026 Altaweel Waseem — Portfolio</p>
-  </footer>
+.kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--accent-1);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
-  <script src="menu.js"></script>
-</body>
-</html>
+/* ========================= LAYOUT ========================= */
+.hero,
+.intro-section,
+.quick-access-section,
+.skills-section,
+.value-section,
+.cta-section,
+.about-section,
+.projects-section,
+.contact-section,
+.mentions-legales,
+.site-map-section {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.intro-section,
+.quick-access-section,
+.skills-section,
+.value-section,
+.cta-section,
+.about-section,
+.projects-section,
+.contact-section,
+.mentions-legales,
+.site-map-section {
+  padding-bottom: var(--space-6);
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  max-width: 18ch;
+}
+
+/* ========================= GLASS BLOCKS ========================= */
+.glass-card,
+.nav-card,
+.nav-item,
+.project,
+.experience,
+.formation,
+.competences,
+.contact-form,
+.contact-info,
+.cta-card,
+.skill-card,
+.highlight-card,
+.site-map-container,
+.mentions-legales section,
+.job,
+.education {
+  background: var(--grad-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ========================= BUTTONS ========================= */
+.btn,
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 50px;
+  padding: 12px 20px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(220, 235, 255, 0.22);
+  background: linear-gradient(135deg, rgba(124, 217, 255, 0.18), rgba(168, 140, 255, 0.18));
+  color: var(--text-1);
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    transform var(--t-fast),
+    box-shadow var(--t-fast),
+    border-color var(--t-fast),
+    background var(--t-fast);
+  box-shadow: 0 10px 26px rgba(8, 18, 40, 0.18);
+}
+
+.btn:hover,
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-float);
+  border-color: var(--glass-border-strong);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgba(124, 217, 255, 0.28), rgba(168, 140, 255, 0.24));
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(160, 220, 255, 0.95);
+  outline-offset: 3px;
+}
+
+/* ========================= HEADER ========================= */
+header,
+.site-header {
+  position: sticky;
+  top: 12px;
+  z-index: 1000;
+  width: var(--header-width);
+  margin: 14px auto 0;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: rgba(9, 18, 38, 0.48);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.logo img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.brand-name {
+  color: var(--text-1);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-tagline {
+  color: var(--text-3);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
+  color: var(--text-2);
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background var(--t-fast),
+    color var(--t-fast),
+    transform var(--t-fast);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--text-1);
+  transform: translateY(-1px);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-1);
+  border-radius: 14px;
+  font-size: 20px;
+  padding: 8px 11px;
+  cursor: pointer;
+}
+
+/* ========================= HERO ========================= */
+.hero {
+  position: relative;
+  padding: clamp(76px, 9vw, 132px) 0 var(--space-5);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero h1 {
+  max-width: 11ch;
+  text-wrap: balance;
+}
+
+.hero-subtitle {
+  max-width: 860px;
+  font-size: clamp(18px, 1.3vw, 20px);
+  color: var(--text-2);
+}
+
+.hero-actions,
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.highlight-card {
+  padding: 22px;
+}
+
+.highlight-card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* ========================= HOME ========================= */
+.intro-grid,
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.glass-card {
+  padding: 24px;
+}
+
+.glass-card h3 {
+  margin-bottom: 12px;
+}
+
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.nav-card,
+.nav-item,
+.project,
+.skill-card,
+.glass-card,
+.highlight-card,
+.job,
+.education {
+  transition:
+    transform var(--t-med),
+    box-shadow var(--t-med),
+    border-color var(--t-med);
+}
+
+.nav-card:hover,
+.nav-item:hover,
+.project:hover,
+.skill-card:hover,
+.glass-card:hover,
+.highlight-card:hover,
+.job:hover,
+.education:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-float), var(--shadow-glow);
+  border-color: var(--glass-border-strong);
+}
+
+.nav-card {
+  overflow: hidden;
+}
+
+.nav-card img,
+.nav-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-card-content {
+  padding: 22px;
+}
+
+.nav-card-content h3 {
+  margin-bottom: 10px;
+}
+
+.nav-card-content p {
+  margin-bottom: 16px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skill-card {
+  padding: 22px;
+}
+
+.skill-card h3 {
+  margin-bottom: 14px;
+}
+
+.skill-card ul {
+  display: grid;
+  gap: 10px;
+}
+
+.skill-card li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+.skill-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+}
+
+.cta-card {
+  padding: clamp(28px, 4vw, 44px);
+}
+
+.cta-card h2 {
+  max-width: 18ch;
+  margin-bottom: 12px;
+}
+
+.cta-card p {
+  max-width: 760px;
+}
+
+/* ========================= ABOUT ========================= */
+.about-section {
+  padding-top: var(--space-5);
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  box-shadow: var(--shadow-soft);
+}
+
+.intro p {
+  margin: 12px 0;
+  max-width: 72ch;
+}
+
+.experience,
+.formation,
+.competences {
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.experience h2,
+.formation h2,
+.competences h2 {
+  margin-bottom: 14px;
+}
+
+.job,
+.education {
+  padding: 22px;
+  margin-top: 18px;
+}
+
+.job h3,
+.education h3 {
+  margin-bottom: 10px;
+}
+
+.job > p,
+.education > p {
+  margin-bottom: 10px;
+}
+
+.job ul,
+.competences ul {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.job li,
+.competences li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--text-2);
+}
+
+.job li::before,
+.competences li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+}
+
+.competences ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+}
+
+/* ========================= PROJECTS ========================= */
+.projects-section {
+  padding-top: var(--space-5);
+}
+
+.projects-section > h1 {
+  max-width: 13ch;
+  margin-bottom: 12px;
+}
+
+.projects-section > p {
+  max-width: 70ch;
+  margin-bottom: 20px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.projects-container .project {
+  padding: 14px;
+  overflow: hidden;
+}
+
+.projects-container .project img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  margin-bottom: 16px;
+}
+
+.projects-container .project h2 {
+  font-size: clamp(22px, 2.4vw, 34px);
+  margin-bottom: 10px;
+}
+
+/* ========================= CONTACT ========================= */
+.contact-section {
+  padding-top: var(--space-5);
+}
+
+.contact-section > p {
+  margin-bottom: 18px;
+  max-width: 70ch;
+}
+
+.contact-form-info {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 22px;
+}
+
+.contact-form,
+.contact-info {
+  padding: 24px;
+}
+
+.contact-form h2,
+.contact-info h2 {
+  margin-bottom: 16px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.input-group img,
+.contact-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid rgba(220, 235, 255, 0.22);
+  border-radius: var(--radius-m);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-1);
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: var(--text-4);
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin: 12px 0;
+}
+
+/* ========================= LEGAL / SITE MAP ========================= */
+.mentions-legales,
+.site-map-section {
+  padding-top: var(--space-5);
+}
+
+.mentions-legales section,
+.site-map-container {
+  padding: 24px;
+}
+
+.mentions-legales section h2,
+.site-map-container h2 {
+  margin-bottom: 14px;
+}
+
+.site-map-container img {
+  width: 100%;
+  max-width: 900px;
+  margin: 24px auto 0;
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ========================= FOOTER ========================= */
+footer {
+  width: var(--header-width);
+  margin: 0 auto 18px;
+  padding: 24px 20px;
+  background: rgba(9, 18, 38, 0.42);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  margin-bottom: 12px;
+}
+
+footer a {
+  color: var(--text-3);
+  font-size: 14px;
+  transition: color var(--t-fast);
+}
+
+footer a:hover {
+  color: var(--text-1);
+}
+
+footer p {
+  color: var(--text-4);
+  font-size: 14px;
+}
+
+/* ========================= RESPONSIVE ========================= */
+@media (max-width: 1100px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-highlights,
+  .intro-grid,
+  .value-grid,
+  .projects-container,
+  .quick-access-grid,
+  .contact-form-info {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-highlights,
+  .intro-grid,
+  .value-grid,
+  .skills-grid,
+  .projects-container,
+  .quick-access-grid,
+  .contact-form-info,
+  .presentation,
+  .competences ul {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2,
+  .cta-card h2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --container: min(1180px, calc(100% - 22px));
+  }
+
+  header,
+  .site-header {
+    top: 8px;
+    margin-top: 8px;
+    padding: 12px 14px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 14px;
+  }
+
+  .hero {
+    padding-top: 44px;
+  }
+
+  .hero-actions,
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .brand-name {
+    font-size: 17px;
+  }
+
+  .brand-tagline {
+    font-size: 11px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 12vw, 52px);
+  }
+
+  h2 {
+    font-size: clamp(26px, 8vw, 36px);
+  }
+
+  footer {
+    border-radius: 20px;
+  }
+}
