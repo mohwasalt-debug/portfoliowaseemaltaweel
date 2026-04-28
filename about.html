@@ -1,277 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Profil de Waseem Altaweel — parcours, BTS SIO option SISR, expérience professionnelle, compétences, projet professionnel et parcours de professionnalisation."
-  />
-  <title>Profil — Altaweel Waseem</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profil de Waseem Altaweel, étudiant en BTS SIO SISR. Parcours, compétences et projet professionnel.">
+  <title>Profil - Waseem Altaweel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header">
-    <div class="logo">
-      <img src="logo.png" alt="Logo Altaweel Waseem" />
-      <div class="logo-text">
-        <span class="brand-name">Altaweel Waseem</span>
-        <span class="brand-tagline">BTS SIO SISR · Systèmes · Réseaux · Cybersécurité</span>
+    <a class="brand" href="index.html"><img src="logo.png" alt="Logo Altaweel Waseem"><span><span class="brand-name">Waseem Altaweel</span><span class="brand-tagline">BTS SIO SISR</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav aria-label="Navigation principale"><ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a class="active" href="about.html">Profil</a></li>
+      <li><a href="projets-pro.html">Projets professionnels</a></li>
+      <li><a href="projets-perso.html">Projets personnels</a></li>
+      <li><a href="veille-technologique.html">Veille technologique</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+  </header>
+
+  <main id="contenu" class="page-main">
+    <div class="page-head">
+      <span class="kicker">Profil</span>
+      <h1>Waseem Altaweel</h1>
+      <p class="lead">Passionné par l'infrastructure réseau, les systèmes et la cybersécurité, je prépare un BTS SIO option SISR avec l'objectif de poursuivre vers un cycle ingénieur informatique.</p>
+      <div class="actions">
+        <a class="btn" href="cv.pdf" download>Télécharger mon CV</a>
+        <a class="btn secondary" href="https://linkedin.com/in/waseem-altaweel-830219311" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
 
-    <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
-
-    <nav aria-label="Navigation principale">
-      <ul class="nav-menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="about.html" class="active">Profil</a></li>
-        <li><a href="projets-pro.html">Projets Pro</a></li>
-        <li><a href="projets-perso.html">Projets Perso</a></li>
-        <li><a href="veille-technologique.html">Veille technologique</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="about-section">
-    <section class="presentation">
-      <img
-        src="photo de profile.png"
-        alt="Photo de profil de Waseem Altaweel"
-        class="profile-pic"
-      />
-
-      <div class="intro">
-        <p class="kicker">Profil</p>
-        <h1>Waseem Altaweel</h1>
-        <p>
-          Je suis actuellement en BTS SIO option SISR. J’ai choisi cette formation
-          parce que je suis particulièrement attiré par les systèmes, les réseaux,
-          l’infrastructure et la cybersécurité.
-        </p>
-        <p>
-          Ce portfolio me permet de présenter mon parcours, mes réalisations,
-          mes projets et les compétences que je développe au fil de ma formation
-          et de mes expériences.
-        </p>
-        <p>
-          Mon objectif est de continuer à progresser dans ces domaines, puis de
-          poursuivre vers un cursus d’ingénieur en informatique avec une orientation
-          liée aux environnements techniques exigeants.
-        </p>
-
-        <div class="hero-actions">
-          <a href="cv.pdf" class="btn btn-primary" download>Télécharger mon CV</a>
-          <a
-            href="https://linkedin.com/in/waseem-altaweel-830219311"
-            class="btn btn-secondary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Voir mon LinkedIn
-          </a>
-          <a href="contact.html" class="btn btn-secondary">Me contacter</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="formation">
-      <p class="kicker">Formation</p>
-      <h2>Le BTS SIO et l’option SISR</h2>
-
-      <div class="education">
-        <h3>Le BTS SIO</h3>
-        <p>
-          Le BTS Services Informatiques aux Organisations est une formation
-          professionnalisante qui prépare aux métiers de l’informatique en entreprise.
-          Elle permet de développer des compétences techniques, mais aussi une vraie
-          méthode de travail à travers les projets, la documentation, la veille
-          technologique et les réalisations concrètes.
-        </p>
-      </div>
-
-      <div class="education">
-        <h3>Les deux options</h3>
-        <p>
-          Le BTS SIO se compose de deux spécialités :
-          <strong>SISR</strong>, orientée solutions d’infrastructure, systèmes et réseaux,
-          et <strong>SLAM</strong>, orientée développement d’applications.
-        </p>
-      </div>
-
-      <div class="education">
-        <h3>Pourquoi j’ai choisi SISR</h3>
-        <p>
-          J’ai choisi l’option SISR parce qu’elle correspond davantage à ce qui
-          m’intéresse : l’administration des systèmes, la mise en place de services,
-          le réseau, la sécurité, le déploiement d’équipements et le support technique.
-        </p>
-      </div>
-    </section>
-
-    <section class="formation">
-      <p class="kicker">Parcours</p>
-      <h2>Mon parcours</h2>
-
-      <div class="education">
-        <h3>BTS SIO — option SISR</h3>
-        <p>CCI Campus Strasbourg — 2024 à 2026</p>
-        <p>
-          Formation orientée infrastructures, systèmes, réseaux et cybersécurité.
-        </p>
-      </div>
-
-      <div class="education">
-        <h3>Cycle ingénieur informatique — poursuite visée</h3>
-        <p>2026 à 2029</p>
-        <p>
-          Je souhaite poursuivre mes études vers un cycle ingénieur en informatique,
-          avec une orientation liée à l’infrastructure, aux systèmes et à la cybersécurité.
-        </p>
-      </div>
-
-      <div class="education">
-        <h3>Licence Accès Santé (LAS) — 1re année</h3>
-        <p>UFR Santé, Université de Besançon — 2022 à 2024</p>
-      </div>
-
-      <div class="education">
-        <h3>Baccalauréat général</h3>
-        <p>Lycée Montaigne, Mulhouse — 2021 à 2022</p>
-        <p>Spécialités : Physique-Chimie, Mathématiques, Biologie.</p>
-      </div>
-    </section>
-
-    <section class="experience">
-      <p class="kicker">Expérience</p>
-      <h2>Expériences professionnelles</h2>
-
-      <div class="job">
-        <h3>
-          Administrateur Systèmes, Réseaux & Responsable Technique —
-          <a
-            href="https://www.mb-informatique.fr/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            MB Informatique
-          </a>
-        </h3>
-        <p><strong>Depuis juillet 2024</strong></p>
-        <p>
-          Cette expérience me permet de travailler sur des sujets concrets liés à
-          l’infrastructure, aux systèmes, aux réseaux et à l’organisation technique.
-          C’est une partie importante de mon évolution, car elle me confronte à des
-          besoins réels et à des environnements professionnels.
-        </p>
-        <ul>
-          <li>Pilotage et suivi de projets d’infrastructure</li>
-          <li>Conception d’architectures réseau adaptées aux besoins</li>
-          <li>Déploiement de racks, switches, pare-feu, Wi-Fi, supervision et monitoring</li>
-          <li>Administration systèmes et réseaux</li>
-          <li>Support et résolution d’incidents</li>
-          <li>Documentation technique et accompagnement utilisateur</li>
-          <li>Prise en compte de la conformité RGPD et des normes ISO</li>
+    <section class="grid">
+      <article class="info-panel full">
+        <h2>Parcours</h2>
+        <ul class="timeline">
+          <li><strong>2024 - 2026 :</strong> BTS SIO option SISR, CCI Campus Strasbourg.</li>
+          <li><strong>Depuis juillet 2024 :</strong> administrateur systèmes, réseaux et responsable technique chez MB Informatique.</li>
+          <li><strong>2022 - 2024 :</strong> Licence Accès Santé, UFR Santé, Université de Besançon.</li>
+          <li><strong>2021 - 2022 :</strong> baccalauréat général au lycée Montaigne de Mulhouse.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="job">
-        <h3>Technicien en Pharmacie — Pharmacie de l’île</h3>
-        <p><strong>Juillet 2023 à décembre 2023</strong></p>
-        <p>
-          Cette expérience m’a surtout apporté de la rigueur, un bon respect des
-          procédures, un sens de l’organisation et une vraie attention à la qualité
-          de service.
-        </p>
-      </div>
-    </section>
-
-    <section class="formation">
-      <p class="kicker">Professionnalisation</p>
-      <h2>Mon parcours de professionnalisation</h2>
-
-      <div class="education">
-        <h3>Une progression à la fois scolaire et concrète</h3>
-        <p>
-          Le BTS SIO ne se limite pas à l’apprentissage théorique. Il permet aussi
-          de développer une manière de travailler : analyser un besoin, proposer une
-          solution, la mettre en place, la documenter et la présenter clairement.
-        </p>
-      </div>
-
-      <div class="education">
-        <h3>Ce que montre ce portfolio</h3>
-        <p>
-          Les différentes pages du portfolio ont pour but de rendre cette progression
-          visible. Les projets professionnels montrent les réalisations menées dans
-          le cadre de la formation. Les projets personnels montrent ce que je fais
-          en dehors des cours pour progresser. La veille technologique complète cet
-          ensemble en montrant les sujets que je suis régulièrement.
-        </p>
-      </div>
-
-      <div class="hero-actions">
-        <a href="projets-pro.html" class="btn btn-primary">Voir les projets pro</a>
-        <a href="projets-perso.html" class="btn btn-secondary">Voir les projets perso</a>
-        <a href="veille-technologique.html" class="btn btn-secondary">Voir la veille</a>
-      </div>
-    </section>
-
-    <section class="competences">
-      <p class="kicker">Compétences</p>
-      <h2>Compétences techniques</h2>
-      <ul>
-        <li>Architecture réseau et déploiement d’équipements</li>
-        <li>VLAN, DMZ, VPN IPsec, pfSense, OpenVPN</li>
-        <li>UniFi, Cisco, Wi-Fi, téléphonie IP</li>
-        <li>Windows, Linux, macOS, Windows Server</li>
-        <li>Active Directory, DNS, DHCP, GPO</li>
-        <li>Administration systèmes et réseaux</li>
-        <li>Supervision, monitoring et tableaux de bord</li>
-        <li>Virtualisation, SAN, NAS, SAS</li>
-        <li>Haute disponibilité et tolérance aux pannes</li>
-        <li>Sauvegarde et continuité de service</li>
-        <li>Cybersécurité, contrôle des accès, chiffrement</li>
-        <li>Support technique, analyse d’incidents, actions correctives</li>
-        <li>Documentation technique et accompagnement utilisateur</li>
-        <li>Conformité RGPD et sensibilité aux normes ISO</li>
-      </ul>
-    </section>
-
-    <section class="formation">
-      <p class="kicker">Informations complémentaires</p>
-      <h2>Langues, certification et mobilité</h2>
-
-      <div class="education">
-        <h3>Langues</h3>
-        <p>
-          Français : langue maternelle · Anglais : avancé (C1) · Arabe : C2 oral et littéraire
-        </p>
-      </div>
-
-      <div class="education">
+      <article class="glass-card wide">
+        <h3>Objectif</h3>
+        <p>Continuer à progresser en infrastructure, systèmes, réseaux et cybersécurité, puis poursuivre vers un cursus d'ingénieur.</p>
+      </article>
+      <article class="glass-card wide">
         <h3>Certification</h3>
         <p>Certification Cisco CCNA en cours.</p>
-      </div>
+      </article>
 
-      <div class="education">
-        <h3>Mobilité</h3>
-        <p>Basé entre Strasbourg et Mulhouse · Véhiculé · Permis B et Permis A.</p>
-      </div>
+      <article class="info-panel full">
+        <h2>Compétences</h2>
+        <ul class="tag-list">
+          <li>Windows Server</li>
+          <li>Linux</li>
+          <li>Active Directory</li>
+          <li>DNS / DHCP</li>
+          <li>VLAN</li>
+          <li>VPN IPsec</li>
+          <li>pfSense</li>
+          <li>OpenVPN</li>
+          <li>UniFi</li>
+          <li>Cisco</li>
+          <li>Supervision</li>
+          <li>Sauvegarde</li>
+          <li>Support technique</li>
+          <li>Documentation</li>
+          <li>Cybersécurité</li>
+        </ul>
+      </article>
     </section>
   </main>
 
   <footer>
-    <ul>
-      <li><a href="mentions-legales.html">Mentions légales</a></li>
-      <li><a href="plan-du-site.html">Plan du site</a></li>
-      <li><a href="veille-technologique.html">Veille technologique</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <p>© 2026 Altaweel Waseem — Portfolio</p>
+    <ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="plan-du-site.html">Plan du site</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <p>© 2026 Waseem Altaweel</p>
   </footer>
-
   <script src="menu.js"></script>
 </body>
 </html>

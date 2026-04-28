@@ -3,12 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=pages/index.html">
-  <title>Portfolio BTS SIO SISR - Waseem Altaweel</title>
-  <link rel="canonical" href="pages/index.html">
-  <script>window.location.replace("pages/index.html");</script>
+  <meta name="description" content="Portfolio de Waseem Altaweel, étudiant en BTS SIO option SISR : profil, projets professionnels, projets personnels et veille technologique.">
+  <title>Portfolio - Waseem Altaweel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p>Redirection vers le portfolio : <a href="pages/index.html">ouvrir le portfolio</a>.</p>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="Logo Altaweel Waseem">
+      <span><span class="brand-name">Waseem Altaweel</span><span class="brand-tagline">BTS SIO SISR</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-menu">
+        <li><a class="active" href="index.html">Accueil</a></li>
+        <li><a href="about.html">Profil</a></li>
+        <li><a href="projets-pro.html">Projets professionnels</a></li>
+        <li><a href="projets-perso.html">Projets personnels</a></li>
+        <li><a href="veille-technologique.html">Veille technologique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="kicker">Portfolio BTS SIO</span>
+        <h1>Infrastructure, systèmes et cybersécurité.</h1>
+        <p class="lead">Je m'appelle Waseem Altaweel. Je prépare un BTS SIO option SISR et je construis mon parcours autour des réseaux, des systèmes, du support technique et de la cybersécurité.</p>
+        <div class="hero-actions">
+          <a class="btn" href="about.html">Voir mon profil</a>
+          <a class="btn secondary" href="projets-pro.html">Projets professionnels</a>
+          <a class="btn secondary" href="cv.pdf" download>Télécharger mon CV</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="photodeprofile.png" alt="Portrait de Waseem Altaweel">
+      </div>
+    </section>
+
+    <section class="page-main">
+      <div class="page-head">
+        <span class="kicker">Repères</span>
+        <h2>Ce que présente ce portfolio</h2>
+      </div>
+      <div class="grid">
+        <article class="glass-card">
+          <h3>Profil</h3>
+          <p>Mon parcours, ma formation, mes compétences et mon objectif de poursuite d'études vers l'ingénierie informatique.</p>
+        </article>
+        <article class="glass-card">
+          <h3>Projets</h3>
+          <p>Deux projets professionnels AP3 et AP4, accompagnés de leurs documents, ainsi que quelques projets personnels.</p>
+        </article>
+        <article class="glass-card">
+          <h3>Veille</h3>
+          <p>Quatre sujets suivis autour des réseaux mobiles, du cloud, des données sensibles et du vol d'identifiants.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+      <li><a href="plan-du-site.html">Plan du site</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>© 2026 Waseem Altaweel</p>
+  </footer>
+  <script src="menu.js"></script>
 </body>
 </html>

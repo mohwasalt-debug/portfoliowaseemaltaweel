@@ -1,98 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Veille technologique — Altaweel Waseem</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veille technologique de Waseem Altaweel : IMSI Catcher, Ubiquiti, SIA et infostealers.">
+  <title>Veille technologique - Waseem Altaweel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Logo Altaweel Waseem" />
-      <span class="brand-text">Altaweel Waseem</span>
-    </div>
-
-    <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
-
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="about.html">Profil</a></li>
-        <li><a href="projets-pro.html">Projets Pro</a></li>
-        <li><a href="projets-perso.html">Projets Perso</a></li>
-        <li><a href="veille-technologique.html">Veille Tech</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="logo.png" alt="Logo Altaweel Waseem"><span><span class="brand-name">Waseem Altaweel</span><span class="brand-tagline">BTS SIO SISR</span></span></a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav aria-label="Navigation principale"><ul class="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">Profil</a></li>
+      <li><a href="projets-pro.html">Projets professionnels</a></li>
+      <li><a href="projets-perso.html">Projets personnels</a></li>
+      <li><a class="active" href="veille-technologique.html">Veille technologique</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
   </header>
 
-  <main class="projects-section">
-    <p class="kicker">Veille technologique & cybersécurité</p>
-    <h1>Mes 4 sujets de veille</h1>
-    <p>
-      Ici, je regroupe les sujets qui m’ont marqué, avec une lecture terrain :
-      impact réel, angle attaquant et mesures à mettre en place côté défense.
-    </p>
+  <main id="contenu" class="page-main">
+    <div class="page-head">
+      <span class="kicker">Veille technologique</span>
+      <h1>Cybersécurité et infrastructures</h1>
+      <p class="lead">Je garde ici les sujets de veille que j'avais choisis au départ, avec une date, une source et ce que j'en retiens côté administration systèmes et réseaux.</p>
+    </div>
 
-    <section class="projects-container">
+    <section class="grid">
       <article class="project">
-        <img src="kali-linux.jpg" alt="Illustration cybersécurité" />
-        <h2>IMSI Catcher & vol de numéros</h2>
-        <p>
-          Le principe est simple : usurper une antenne pour capter des identifiants
-          mobiles, puis s’en servir pour des scams, du SIM swap ou du phishing SMS.
-          Pour moi, c’est un vrai rappel qu’un numéro de téléphone ne doit jamais
-          être considéré comme une preuve d’identité solide.
-        </p>
+        <img src="img/msicatcher.jpg" alt="Illustration IMSI Catcher">
+        <div class="project-body">
+          <span class="date-pill">13 mars 2026</span>
+          <h2>IMSI Catcher & vol de numéros</h2>
+          <p>Les IMSI Catchers imitent une antenne mobile pour capter des téléphones proches. Dans les affaires récentes, ce type de matériel est aussi relié à l'envoi massif de SMS frauduleux.</p>
+          <p>Ce sujet m'intéresse parce qu'il montre que la sécurité ne concerne pas seulement les serveurs : le réseau mobile et l'identité téléphonique peuvent aussi devenir des points faibles.</p>
+          <div class="source-row">
+            <a class="btn secondary" href="https://www.leparisien.fr/faits-divers/paris-sept-personnes-condamnees-a-des-peines-allant-jusqua-cinq-ans-de-prison-ferme-pour-une-escroquerie-high-tech-aux-sms-frauduleux-13-03-2026-S7HRCY4UOZBXBLYMJGJ6MIBTDU.php" target="_blank" rel="noopener noreferrer">Source</a>
+          </div>
+        </div>
       </article>
 
       <article class="project">
-        <img src="photo cloud serveur.jpg" alt="Serveur et réseaux" />
-        <h2>Affaire Ubiquiti / UniFi et fuite de données</h2>
-        <p>
-          Cette affaire montre qu’un acteur même reconnu peut être touché :
-          exposition d’informations internes, impact sur la confiance client et
-          enjeu de communication de crise. Côté administration, je retiens surtout
-          l’importance de la segmentation, du moindre privilège et du monitoring des
-          comptes sensibles.
-        </p>
+        <img src="photo cloud serveur.jpg" alt="Serveurs et cloud">
+        <div class="project-body">
+          <span class="date-pill">11 janvier 2021</span>
+          <h2>Affaire Ubiquiti / UniFi et fuite de données</h2>
+          <p>L'incident Ubiquiti m'a marqué parce qu'il touche un acteur très présent dans les réseaux Wi-Fi et les environnements UniFi. La leçon principale reste simple : le cloud, les comptes administrateurs et les accès internes doivent être surveillés avec sérieux.</p>
+          <p>Dans une infrastructure, je retiens surtout le moindre privilège, les journaux, le MFA et une communication claire en cas d'incident.</p>
+          <div class="source-row">
+            <a class="btn secondary" href="https://www.theregister.com/2021/04/01/ubiquiti_data_breach/" target="_blank" rel="noopener noreferrer">Source</a>
+          </div>
+        </div>
       </article>
 
       <article class="project">
-        <img src="projet2.jpeg" alt="Infrastructure IT" />
-        <h2>Vol de données du SIA</h2>
-        <p>
-          Quand une plateforme liée au SIA est concernée par une fuite, l’impact
-          dépasse la simple dimension IT : on touche à des données très sensibles.
-          Ma lecture : il faut durcir l’authentification, mieux tracer les accès et
-          tester régulièrement la réponse à incident, pas seulement la théorie.
-        </p>
+        <img src="projet2.jpeg" alt="Infrastructure réseau sensible">
+        <div class="project-body">
+          <span class="date-pill">25 mars 2026</span>
+          <h2>Vol de données du SIA</h2>
+          <p>Le SIA contient des informations sensibles autour des armes et de leurs détenteurs. Même lorsqu'une fuite est seulement évoquée ou contestée, le risque montre l'importance de protéger les plateformes qui centralisent des données personnelles.</p>
+          <p>Pour moi, ce sujet rejoint directement le RGPD, la traçabilité des accès, la protection des bases et les tests de réponse à incident.</p>
+          <div class="source-row">
+            <a class="btn secondary" href="https://www.sochasse.fr/savoir-chasser/armes-munitions/sia-la-fuite-que-tout-le-monde-redoutait-viendrait-elle-de-se-produire/" target="_blank" rel="noopener noreferrer">Source</a>
+          </div>
+        </div>
       </article>
 
       <article class="project">
-        <img src="pc-build.jpg" alt="Poste de travail sécurisé" />
-        <h2>Mon choix : fuites massives via infostealers</h2>
-        <p>
-          Les infostealers sont devenus un vrai problème opérationnel : vol de
-          sessions, de mots de passe et de données navigateurs, puis revente sur des
-          marchés spécialisés. Je surveille ce sujet car il relie poste utilisateur,
-          contournement du MFA et compromission d’entreprise.
-        </p>
+        <img src="pc-build.jpg" alt="Poste de travail et sécurité des identifiants">
+        <div class="project-body">
+          <span class="date-pill">20 janvier 2026</span>
+          <h2>Mon choix : fuites massives via infostealers</h2>
+          <p>Les infostealers récupèrent mots de passe, cookies de session et données stockées dans le navigateur. Le danger est concret : un poste compromis peut ouvrir la porte à des comptes professionnels, même avec des mots de passe corrects.</p>
+          <p>Je retiens surtout l'importance de l'EDR/antivirus, des mises à jour, du MFA, de la sensibilisation et du contrôle des mots de passe compromis.</p>
+          <div class="source-row">
+            <a class="btn secondary" href="https://specopssoft.com/blog/new-research-6-billion-compromised-passwords-2026/" target="_blank" rel="noopener noreferrer">Source</a>
+          </div>
+        </div>
       </article>
     </section>
   </main>
 
   <footer>
-    <ul>
-      <li><a href="mentions-legales.html">Mentions légales</a></li>
-      <li><a href="plan-du-site.html">Plan du site</a></li>
-      <li><a href="veille-technologique.html">Veille Tech</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <p>© 2026 Altaweel Waseem — Portfolio</p>
+    <ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="plan-du-site.html">Plan du site</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <p>© 2026 Waseem Altaweel</p>
   </footer>
-
   <script src="menu.js"></script>
 </body>
 </html>
