@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">NIS 2 et conformité cyber</title>
+  <desc id="desc">Tableau de bord cyber avec bouclier NIS 2, sauvegardes, accès et incidents.</desc>
+  <rect width="900" height="520" fill="#e8faf7"/>
+  <rect x="70" y="70" width="760" height="380" rx="24" fill="#fff" stroke="#0f766e" stroke-width="8"/>
+  <text x="110" y="135" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#0f766e">NIS 2</text>
+  <text x="110" y="178" font-family="Arial, sans-serif" font-size="24" fill="#17202a">conformité, incidents, continuité</text>
+  <path d="M650 135l85 32v70c0 57-35 91-85 113-50-22-85-56-85-113v-70z" fill="#f0fdfa" stroke="#0f766e" stroke-width="8"/>
+  <path d="M617 238l28 28 58-72" fill="none" stroke="#0f766e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="none" stroke="#0f766e" stroke-width="7" stroke-linecap="round">
+    <path d="M120 250h270M120 305h220M120 360h300"/>
+    <path d="M455 250h70M455 305h70M455 360h70"/>
+  </g>
+  <g fill="#0f766e">
+    <circle cx="415" cy="250" r="14"/><circle cx="365" cy="305" r="14"/><circle cx="445" cy="360" r="14"/>
+  </g>
+</svg>

@@ -1,0 +1,241 @@
+/* ===================== IMPORTATION DES POLICES ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ===================== DÉFINITION DES COULEURS PRINCIPALES ===================== */
+:root {
+    --primary-color: #63806f; /* Couleur principale */
+    --secondary-color: #F6F6F6; /* Couleur de fond principale */
+    --text-color: #000; /* Couleur principale du texte */
+    --white: #fff; /* Couleur blanche */
+}
+
+/* ===================== RÉINITIALISATION DES STYLES ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Police générale */
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* ===================== HEADER ===================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+.brand-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* ===================== NAVIGATION ===================== */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-btn {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.nav-btn a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    background-color: #6dd491;
+    transform: scale(1.05);
+}
+
+/* ===================== BOUTON MENU BURGER (Mobile) ===================== */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* ===================== SECTION "À PROPOS" ===================== */
+.about-section {
+    max-width: 900px;
+    margin: 120px auto 50px auto;
+    padding: 40px;
+    background-color: var(--white);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ===================== DIMENSIONNEMENT DE L'IMAGE DE PROFIL ===================== */
+.profile-pic {
+    width: 150px; /* Largeur fixe de l'image */
+    height: 150px; /* Hauteur fixe de l'image */
+    border-radius: 50%; /* Rend l'image ronde */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre autour de l'image */
+}
+
+.intro h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Bouton CV */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #58c77f;
+    transform: scale(1.05);
+}
+
+.nav-btn.contact {
+    background-color: black;
+}
+
+/* ===================== SECTIONS "EXPÉRIENCES / FORMATION / COMPÉTENCES" ===================== */
+.experience, .formation, .competences {
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* ===================== RESPONSIVE (MOBILE) ===================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 15px 0;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+
+    .about-section {
+        width: 90%;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    .presentation {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ajustement de la taille de l'image de profil sur mobile */
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}

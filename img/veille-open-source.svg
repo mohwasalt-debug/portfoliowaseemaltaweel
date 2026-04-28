@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Open source sécurisé</title>
+  <desc id="desc">Dépôt open source avec chaîne de confiance, dépendances et bouclier de sécurité.</desc>
+  <rect width="900" height="520" fill="#f0fdf4"/>
+  <rect x="65" y="70" width="770" height="380" rx="26" fill="#fff" stroke="#15803d" stroke-width="8"/>
+  <text x="115" y="135" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#15803d">OPEN SOURCE</text>
+  <text x="115" y="178" font-family="Arial, sans-serif" font-size="24" fill="#17202a">dépendances, audit, confiance</text>
+  <g fill="none" stroke="#15803d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="120" y="230" width="250" height="145" rx="16"/>
+    <path d="M150 270h190M150 315h135M150 350h170"/>
+    <path d="M520 170l96 36v80c0 65-40 104-96 129-56-25-96-64-96-129v-80z" fill="#ecfdf3"/>
+    <path d="M480 290l31 31 68-83"/>
+    <path d="M370 302h54M616 302h104"/>
+  </g>
+  <g fill="#15803d">
+    <circle cx="424" cy="302" r="13"/><circle cx="720" cy="302" r="13"/>
+  </g>
+</svg>

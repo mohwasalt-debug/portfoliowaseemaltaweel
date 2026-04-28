@@ -1,0 +1,15 @@
+Documents nécessaires pour cocher la checklist à 100% :
+
+1. Tableau croisé E5 en PDF.
+2. PDF des missions E5.
+3. PDF de la veille technologique, si un document séparé est exigé.
+4. Lien public vers les badges ou certifications, si disponible.
+5. Nom de domaine final et confirmation de l'hébergeur.
+6. Confirmation du système de backup configuré pour le site.
+
+Déjà présents :
+- CV : documents/cv.pdf
+- E6 AP3 fiche situation : documents/e6/ap3-fiche-situation-professionnelle-1.pdf
+- E6 AP3 documentation technique : documents/e6/ap3-documentation-technique-situation1.pdf
+- E6 AP4 fiche situation : documents/e6/ap4-fiche-situation-professionnelle-2.pdf
+- E6 AP4 documentation technique : documents/e6/ap4-documentation-technique-situation2.pdf

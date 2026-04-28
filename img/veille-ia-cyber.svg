@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">IA et réponse à incident</title>
+  <desc id="desc">Centre SOC avec IA, journaux, alertes et réponse à incident.</desc>
+  <rect width="900" height="520" fill="#eef2ff"/>
+  <rect x="65" y="70" width="770" height="380" rx="26" fill="#fff" stroke="#4338ca" stroke-width="8"/>
+  <text x="115" y="135" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#4338ca">IA + SOC</text>
+  <text x="115" y="178" font-family="Arial, sans-serif" font-size="24" fill="#17202a">détection et réponse à incident</text>
+  <g fill="none" stroke="#4338ca" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M575 165c-48 0-78 36-78 77 0 19 7 38 21 53-7 50 31 82 75 69 18 28 64 28 82 0 44 13 82-19 75-69 14-15 21-34 21-53 0-41-30-77-78-77-17-38-101-38-118 0z" fill="#f5f3ff"/>
+    <path d="M620 188v148M678 188v148M558 245h173M575 302h138"/>
+    <path d="M120 250h280M120 300h230M120 350h300"/>
+  </g>
+  <g fill="#4338ca">
+    <circle cx="424" cy="250" r="12"/><circle cx="376" cy="300" r="12"/><circle cx="446" cy="350" r="12"/>
+  </g>
+</svg>

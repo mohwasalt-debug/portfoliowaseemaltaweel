@@ -1,0 +1,221 @@
+/* ===================== IMPORTATION DE LA POLICE ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ===================== DÉFINITION DES COULEURS PRINCIPALES ===================== */
+:root {
+    --primary-color: #63806f; /* Couleur principale utilisée pour les boutons et les titres */
+    --secondary-color: #F6F6F6; /* Couleur de fond du site */
+    --text-color: #000; /* Couleur du texte principal */
+    --white: #fff; /* Couleur blanche pour les contrastes */
+}
+
+/* ===================== RESET DES STYLES ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Police uniforme sur tout le site */
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* ===================== HEADER ===================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--white);
+    position: fixed; /* Le header reste visible en haut lors du scroll */
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Effet d'ombre sous le header */
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+.brand-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* ===================== NAVIGATION ===================== */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-btn {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.nav-btn a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    background-color: #58c77f; /* Changement de couleur au survol */
+    transform: scale(1.05); /* Effet d'agrandissement léger */
+}
+
+.nav-btn.contact {
+    background-color: black; /* Fond noir spécifique pour le bouton contact */
+}
+
+/* ===================== SECTION PROJETS PROFESSIONNELS ===================== */
+.projects-section {
+    max-width: 1100px;
+    margin: 120px auto 50px auto; /* Décalage sous le header et centrage */
+    padding: 40px;
+    background-color: var(--white);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.projects-section h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* ===================== GRILLE DES PROJETS ===================== */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour afficher les projets */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.project {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+.project img {
+    width: 100%; /* L'image s'adapte à la largeur de son conteneur */
+    border-radius: 8px;
+    height: auto;
+}
+
+.project h2 {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-top: 15px;
+}
+
+.project p {
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* ===================== MENU BURGER ===================== */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 15px 0;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+
+    /* ===================== AJUSTEMENTS POUR MOBILE ===================== */
+    .projects-section {
+        width: 90%;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr; /* Les projets s'affichent en colonne sur mobile */
+    }
+
+    .project img {
+        width: 90%;
+        margin: auto;
+    }
+}

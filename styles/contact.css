@@ -1,0 +1,312 @@
+/* ===================== IMPORTATION DE LA POLICE 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ===================== DÉFINITION DES COULEURS PRINCIPALES ===================== */
+:root {
+    --primary-color: #63806f;  /* Couleur principale (vert) */
+    --secondary-color: #F6F6F6;  /* Couleur de fond (gris clair) */
+    --text-color: #000;  /* Couleur du texte (noir) */
+    --white: #fff;  /* Blanc */
+}
+
+/* ===================== RESET DES STYLES ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;  /* Applique la police sur tout le document */
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* ===================== HEADER ===================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Ombre sous le header */
+    z-index: 1000;
+}
+
+/* ===================== LOGO ===================== */
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Espacement entre l'image et le texte */
+}
+
+header .logo img {
+    height: 50px;  /* Hauteur du logo */
+}
+
+.brand-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* ===================== NAVIGATION ===================== */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-btn {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.nav-btn a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    background-color: #7cc485;  /* Changement de couleur au survol */
+    transform: scale(1.05);  /* Agrandissement léger au survol */
+}
+
+.nav-btn.accueil {
+    background-color: black; /* Applique un fond noir pour le bouton Accueil */
+}
+
+/* ===================== SECTION CONTACT ===================== */
+.contact-section {
+    background: var(--primary-color);
+    padding: 80px 5%;
+    text-align: center;
+    color: var(--white);
+    margin-top: 80px;  /* Décalage sous le header */
+}
+
+.contact-section h2 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.contact-section p {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 150px;
+}
+
+/* ===================== ALIGNEMENT DU FORMULAIRE & CONTACT ===================== */
+.contact-form-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Alignement au début */
+    gap: 50px;  /* Espacement entre le formulaire et les contacts */
+}
+
+/* Ajustement des largeurs */
+.contact-form, .contact-info {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* ===================== FORMULAIRE ===================== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ===================== STYLE DES CHAMPS AVEC ICONES ===================== */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: 5px;
+    padding: 10px;
+    width: 350px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-group img {
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.input-group input {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    padding: 10px;
+}
+
+/* ===================== BOUTON ENVOYER ===================== */
+.submit-btn {
+    margin-top: 10px;
+    margin-left: 55px;
+    padding: 12px 30px;
+    border: 2px solid var(--text-color);
+    background-color: #ffffff;
+    color: var(--text-color);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.submit-btn:hover {
+    background: var(--text-color);
+    color: var(--white);
+}
+
+/* ===================== MES CONTACTS ===================== */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Style du titre "Mes contacts" */
+.contact-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 10px 20px;
+    border: 2px solid var(--text-color);
+    display: inline-block;
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text-color);
+    margin-right: 190px;
+}
+
+/* ===================== STYLE DES BLOCS CONTACT ===================== */
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 12px 20px;
+    border: 2px dashed var(--text-color);
+    border-radius: 30px;
+    background: #aea3a3c0;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+    width: 350px;
+    text-align: left;
+}
+
+.contact-item img {
+    height: 20px;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background: var(--white);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* ===================== MENU BURGER ===================== */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 15px 0;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+
+
+    /* Ajustement du formulaire */
+    .contact-form-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .contact-form input {
+        width: 90%;
+    }
+
+    .contact-item {
+        width: 90%;
+    }
