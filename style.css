@@ -1,861 +1,308 @@
-/* =========================================================
-   PORTFOLIO — ALTAWEEL WASEEM
-   Modern Glass / Apple-inspired Design System
-   ========================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-:root {
-  /* Backgrounds */
-  --bg-0: #07111f;
-  --bg-1: #0d1830;
-  --bg-2: #152448;
-  --bg-3: #1b2f5f;
-
-  /* Text */
-  --text-1: #f6f9ff;
-  --text-2: #dbe6ff;
-  --text-3: #aebedf;
-  --text-4: #7d8fb5;
-
-  /* Accents */
-  --accent-1: #7cd9ff;
-  --accent-2: #a88cff;
-  --accent-3: #7effc4;
-  --accent-4: #ff7cdb;
-
-  /* Surfaces */
-  --glass-bg: rgba(255, 255, 255, 0.08);
-  --glass-bg-strong: rgba(255, 255, 255, 0.12);
-  --glass-border: rgba(190, 220, 255, 0.22);
-  --glass-border-strong: rgba(190, 220, 255, 0.34);
-
-  /* Effects */
-  --glass-blur: blur(22px) saturate(160%);
-  --shadow-soft: 0 10px 30px rgba(4, 10, 24, 0.22);
-  --shadow-float: 0 18px 50px rgba(4, 10, 24, 0.34);
-  --shadow-glow: 0 0 30px rgba(124, 217, 255, 0.12);
-
-  /* Radius */
-  --radius-s: 12px;
-  --radius-m: 18px;
-  --radius-l: 26px;
-  --radius-xl: 34px;
-  --radius-pill: 999px;
-
-  /* Layout */
-  --container: min(1180px, calc(100% - 40px));
-
-  /* Spacing */
-  --space-1: 8px;
-  --space-2: 14px;
-  --space-3: 22px;
-  --space-4: 34px;
-  --space-5: 54px;
-  --space-6: 88px;
-
-  /* Timing */
-  --t-fast: 0.2s ease;
-  --t-med: 0.35s ease;
-
-  /* Gradients */
-  --grad-bg:
-    linear-gradient(160deg, var(--bg-0) 0%, var(--bg-1) 30%, var(--bg-2) 68%, var(--bg-3) 100%);
-  --grad-accent:
-    linear-gradient(90deg, var(--accent-1) 0%, var(--accent-2) 45%, var(--accent-3) 100%);
-  --grad-card:
-    linear-gradient(145deg, rgba(255,255,255,0.14), rgba(255,255,255,0.05));
-  --accent-soft:
-    linear-gradient(135deg, rgba(124, 217, 255, 0.24), rgba(168, 140, 255, 0.18));
-}
-
-/* ========================= RESET ========================= */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--text-2);
-  background:
-    radial-gradient(900px 500px at -10% -10%, rgba(124, 217, 255, 0.18), transparent 60%),
-    radial-gradient(800px 480px at 110% 0%, rgba(168, 140, 255, 0.18), transparent 62%),
-    radial-gradient(850px 500px at 50% 120%, rgba(255, 124, 219, 0.12), transparent 64%),
-    var(--grad-bg);
-  background-attachment: fixed;
-  -webkit-font-smoothing: antialiased;
-  position: relative;
-  min-height: 100vh;
-}
-
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(70px);
-  pointer-events: none;
-  z-index: -1;
-}
-
-body::before {
-  width: 360px;
-  height: 360px;
-  top: 8%;
-  left: -90px;
-  background: rgba(124, 217, 255, 0.16);
-}
-
-body::after {
-  width: 420px;
-  height: 420px;
-  right: -120px;
-  bottom: 2%;
-  background: rgba(168, 140, 255, 0.18);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-ul {
-  list-style: none;
-}
-
-/* ========================= TYPO ========================= */
-h1,
-h2,
-h3 {
-  color: var(--text-1);
-  letter-spacing: -0.03em;
-}
-
-h1 {
-  font-size: clamp(42px, 7vw, 84px);
-  line-height: 1.04;
-  font-weight: 800;
-}
-
-h2 {
-  font-size: clamp(28px, 4vw, 52px);
-  line-height: 1.12;
-  font-weight: 750;
-}
-
-h3 {
-  font-size: clamp(20px, 2.2vw, 28px);
-  line-height: 1.2;
-  font-weight: 700;
-}
-
-p {
-  color: var(--text-2);
-  font-size: clamp(16px, 1.05vw, 18px);
-}
-
-.kicker {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: var(--accent-1);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.center {
-  text-align: center;
-}
-
-/* ========================= UTILS ========================= */
-main,
-.about-section,
-.projects-section,
-.contact-section,
-.mentions-legales,
-.site-map-section {
-  width: var(--container);
-  margin-inline: auto;
-}
-
-.section-heading {
-  margin-bottom: 26px;
-}
-
-.section-heading h2 {
-  max-width: 14ch;
-}
-
-.glass-card,
-.nav-item,
-.nav-card,
-.project,
-.experience,
-.formation,
-.competences,
-.contact-form,
-.contact-info,
-.cta-card,
-.skill-card,
-.highlight-card,
-.site-map-container,
-.mentions-legales section {
-  background: var(--grad-card);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-l);
-  box-shadow: var(--shadow-soft);
-}
-
-/* ========================= BUTTONS ========================= */
-.btn,
-.submit-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 48px;
-  padding: 12px 20px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(220, 235, 255, 0.22);
-  background: linear-gradient(135deg, rgba(124, 217, 255, 0.18), rgba(168, 140, 255, 0.18));
-  color: var(--text-1);
-  font-size: 15px;
-  font-weight: 650;
-  transition:
-    transform var(--t-fast),
-    box-shadow var(--t-fast),
-    border-color var(--t-fast),
-    background var(--t-fast);
-  box-shadow: 0 10px 26px rgba(8, 18, 40, 0.18);
-}
-
-.btn:hover,
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-float);
-  border-color: var(--glass-border-strong);
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, rgba(124, 217, 255, 0.28), rgba(168, 140, 255, 0.24));
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid rgba(160, 220, 255, 0.95);
-  outline-offset: 3px;
-}
-
-/* ========================= HEADER ========================= */
-header,
-.site-header {
-  position: sticky;
-  top: 12px;
-  z-index: 1000;
-  width: min(1240px, calc(100% - 24px));
-  margin: 14px auto 0;
-  padding: 14px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  background: rgba(9, 18, 38, 0.48);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: 24px;
-  box-shadow: var(--shadow-soft);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-.logo img {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  border-radius: 12px;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.brand-name,
-.brand-text {
-  color: var(--text-1);
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
-
-.brand-tagline {
-  color: var(--text-3);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-.nav-menu a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: var(--radius-pill);
-  color: var(--text-2);
-  font-size: 14px;
-  font-weight: 600;
-  transition:
-    background var(--t-fast),
-    color var(--t-fast),
-    transform var(--t-fast);
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-  background: rgba(255, 255, 255, 0.10);
-  color: var(--text-1);
-  transform: translateY(-1px);
-}
-
-.menu-toggle {
-  display: none;
-  border: 1px solid var(--glass-border);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-1);
-  border-radius: 14px;
-  font-size: 20px;
-  padding: 8px 11px;
-  cursor: pointer;
-}
-
-/* ========================= HERO ========================= */
-.hero {
-  position: relative;
-  padding: clamp(76px, 9vw, 132px) 0 var(--space-5);
-}
-
-.hero-home {
-  min-height: auto;
-}
-
-.overlay {
-  display: none;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.hero h1 {
-  max-width: 12ch;
-  text-wrap: balance;
-}
-
-.hero-subtitle {
-  max-width: 800px;
-  color: var(--text-2);
-  font-size: clamp(18px, 1.3vw, 21px);
-}
-
-.hero-actions,
-.cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.hero-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 20px;
-}
-
-.highlight-card {
-  padding: 22px;
-}
-
-.highlight-card h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-/* ========================= HOME SECTIONS ========================= */
-.intro-section,
-.quick-access-section,
-.skills-section,
-.value-section,
-.cta-section {
-  padding: 0 0 var(--space-6);
-}
-
-.intro-grid,
-.value-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.glass-card {
-  padding: 24px;
-}
-
-.quick-access-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.nav-card,
-.nav-item {
-  overflow: hidden;
-  transition:
-    transform var(--t-med),
-    box-shadow var(--t-med),
-    border-color var(--t-med);
-}
-
-.nav-card:hover,
-.nav-item:hover,
-.project:hover,
-.skill-card:hover,
-.glass-card:hover,
-.highlight-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-float), var(--shadow-glow);
-  border-color: var(--glass-border-strong);
-}
-
-.nav-card img,
-.nav-item img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-.nav-card-content {
-  padding: 22px;
-}
-
-.nav-card-content h3 {
-  margin-bottom: 10px;
-}
-
-.nav-card-content p {
-  margin-bottom: 16px;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.skill-card {
-  padding: 22px;
-}
-
-.skill-card h3 {
-  margin-bottom: 14px;
-}
-
-.skill-card ul {
-  display: grid;
-  gap: 10px;
-}
-
-.skill-card li {
-  position: relative;
-  padding-left: 18px;
-  color: var(--text-2);
-  font-size: 15px;
-}
-
-.skill-card li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.72em;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-}
-
-.cta-card {
-  padding: clamp(28px, 4vw, 44px);
-}
-
-.cta-card h2 {
-  max-width: 16ch;
-  margin-bottom: 12px;
-}
-
-.cta-card p {
-  max-width: 760px;
-}
-
-/* ========================= ABOUT ========================= */
-.about-section {
-  padding: var(--space-5) 0 var(--space-6);
-}
-
-.presentation {
-  display: grid;
-  grid-template-columns: minmax(180px, 240px) 1fr;
-  gap: var(--space-4);
-  align-items: center;
-  margin-bottom: var(--space-4);
-}
-
-.profile-pic {
-  width: 100%;
-  max-width: 220px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.22);
-  box-shadow: var(--shadow-soft);
-}
-
-.intro p {
-  margin: 12px 0;
-  max-width: 72ch;
-}
-
-.experience,
-.formation,
-.competences {
-  padding: 24px;
-  margin-bottom: 18px;
-}
-
-.competences ul {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 18px;
-  margin-top: 14px;
-}
-
-.competences li {
-  position: relative;
-  padding-left: 18px;
-}
-
-.competences li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.72em;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-}
-
-/* ========================= PROJECTS ========================= */
-.projects-section {
-  padding: var(--space-5) 0 var(--space-6);
-}
-
-.projects-section > h1 {
-  max-width: 13ch;
-  margin-bottom: 12px;
-}
-
-.projects-section > p {
-  max-width: 70ch;
-  margin-bottom: 20px;
-}
-
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.projects-container .project {
-  padding: 14px;
-  overflow: hidden;
-  transition:
-    transform var(--t-med),
-    box-shadow var(--t-med),
-    border-color var(--t-med);
-}
-
-.projects-container .project img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: var(--radius-m);
-  margin-bottom: 16px;
-}
-
-.projects-container .project h2 {
-  font-size: clamp(22px, 2.4vw, 34px);
-  margin-bottom: 10px;
-}
-
-/* ========================= CONTACT ========================= */
-.contact-section {
-  padding: var(--space-5) 0 var(--space-6);
-}
-
-.contact-section > p {
-  margin-bottom: 18px;
-  max-width: 70ch;
-}
-
-.contact-form-info {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 22px;
-}
-
-.contact-form,
-.contact-info {
-  padding: 24px;
-}
-
-.input-group {
-  display: grid;
-  grid-template-columns: 22px 1fr;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-
-.input-group img,
-.contact-item img {
-  width: 20px;
-  height: 20px;
-}
-
-.input-group input,
-.input-group textarea {
-  width: 100%;
-  padding: 13px 14px;
-  border: 1px solid rgba(220, 235, 255, 0.22);
-  border-radius: var(--radius-m);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-1);
-  font-size: 15px;
-  font-family: inherit;
-  resize: vertical;
-}
-
-.input-group input::placeholder,
-.input-group textarea::placeholder {
-  color: var(--text-4);
-}
-
-.contact-item {
-  display: grid;
-  grid-template-columns: 20px 1fr;
-  gap: 10px;
-  align-items: center;
-  margin: 12px 0;
-}
-
-/* ========================= LEGAL / SITE MAP ========================= */
-.mentions-legales,
-.site-map-section {
-  padding: var(--space-5) 0 var(--space-6);
-}
-
-.mentions-legales section,
-.site-map-container {
-  padding: 24px;
-}
-
-.site-map-container img {
-  width: 100%;
-  max-width: 900px;
-  margin: 24px auto 0;
-  border-radius: var(--radius-m);
-  box-shadow: var(--shadow-soft);
-}
-
-/* ========================= FOOTER ========================= */
-footer {
-  width: min(1240px, calc(100% - 24px));
-  margin: 0 auto 18px;
-  padding: 24px 20px;
-  background: rgba(9, 18, 38, 0.42);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--glass-border);
-  border-radius: 24px;
-  box-shadow: var(--shadow-soft);
-}
-
-footer ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 16px;
-  margin-bottom: 12px;
-}
-
-footer a {
-  color: var(--text-3);
-  font-size: 14px;
-  transition: color var(--t-fast);
-}
-
-footer a:hover {
-  color: var(--text-1);
-}
-
-footer p {
-  color: var(--text-4);
-  font-size: 14px;
-}
-
-/* ========================= RESPONSIVE ========================= */
-@media (max-width: 1024px) {
-  .hero-highlights,
-  .intro-grid,
-  .value-grid,
-  .skills-grid,
-  .projects-container,
-  .quick-access-grid,
-  .contact-form-info {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 860px) {
-  .hero-highlights,
-  .intro-grid,
-  .value-grid,
-  .skills-grid,
-  .projects-container,
-  .quick-access-grid,
-  .contact-form-info,
-  .presentation {
-    grid-template-columns: 1fr;
-  }
-
-  .competences ul {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px) {
-  :root {
-    --container: min(1180px, calc(100% - 22px));
-  }
-
-  header,
-  .site-header {
-    top: 8px;
-    margin-top: 8px;
-    padding: 12px 14px;
-    border-radius: 20px;
-    flex-wrap: wrap;
-  }
-
-  .menu-toggle {
-    display: inline-flex;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    margin-top: 10px;
-    gap: 8px;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-menu a {
-    width: 100%;
-    justify-content: flex-start;
-    padding: 12px 14px;
-  }
-
-  .hero {
-    padding-top: 44px;
-  }
-
-  .hero-actions,
-  .cta-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .logo-text {
-    gap: 0;
-  }
-
-  .brand-tagline {
-    font-size: 11px;
-  }
-
-  h1 {
-    font-size: clamp(36px, 12vw, 52px);
-  }
-
-  h2 {
-    font-size: clamp(26px, 8vw, 36px);
-  }
-
-  footer {
-    border-radius: 20px;
-  }
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio de Waseem Altaweel — étudiant en BTS SIO option SISR. Parcours, réalisations professionnelles, projets, veille technologique, compétences en systèmes, réseaux et cybersécurité."
+  />
+  <title>Altaweel Waseem — Accueil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo Altaweel Waseem" />
+      <div class="logo-text">
+        <span class="brand-name">Altaweel Waseem</span>
+        <span class="brand-tagline">BTS SIO SISR · Systèmes · Réseaux · Cybersécurité</span>
+      </div>
+    </div>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+
+    <nav aria-label="Navigation principale">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="about.html">Profil</a></li>
+        <li><a href="realisations-professionnelles.html">Réalisations pro</a></li>
+        <li><a href="projets-perso.html">Projets perso</a></li>
+        <li><a href="veille-technologique.html">Veille techno</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-home">
+      <div class="hero-content">
+        <p class="kicker">Portfolio BTS SIO</p>
+        <h1>Bonjour, je suis Waseem Altaweel</h1>
+        <p class="hero-subtitle">
+          Je suis étudiant en BTS SIO option SISR et je construis un profil orienté
+          systèmes, réseaux, cybersécurité et infrastructure. Ce portfolio regroupe
+          mon parcours, mes réalisations, mes projets et ma veille technologique,
+          avec une approche simple, concrète et tournée vers le terrain.
+        </p>
+
+        <div class="hero-actions">
+          <a href="about.html" class="btn btn-primary">Découvrir mon profil</a>
+          <a href="realisations-professionnelles.html" class="btn btn-secondary">Voir mes réalisations</a>
+          <a href="cv.pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
+          <a
+            href="https://www.linkedin.com/in/waseem-altaweel-830219311"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir mon LinkedIn
+          </a>
+        </div>
+
+        <div class="hero-highlights">
+          <article class="highlight-card">
+            <h2>Mon parcours actuel</h2>
+            <p>
+              Je suis en BTS SIO option SISR, avec une orientation claire vers
+              l’administration systèmes et réseaux, la sécurisation des environnements
+              et la continuité de service.
+            </p>
+          </article>
+
+          <article class="highlight-card">
+            <h2>Expérience terrain</h2>
+            <p>
+              En parallèle, j’évolue chez MB Informatique, où je participe à des sujets
+              d’infrastructure, de déploiement, de support technique et d’organisation
+              d’environnements informatiques.
+            </p>
+          </article>
+
+          <article class="highlight-card">
+            <h2>Objectif professionnel</h2>
+            <p>
+              Mon but est de continuer vers un cycle ingénieur et de progresser sur des
+              missions à forte valeur ajoutée en infrastructure, réseaux, cybersécurité
+              et environnement industriel.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-section">
+      <div class="section-heading">
+        <p class="kicker">À propos de ce portfolio</p>
+        <h2>Un espace pensé pour présenter mon parcours de manière claire</h2>
+      </div>
+
+      <div class="intro-grid">
+        <article class="glass-card">
+          <h3>Pourquoi ce site</h3>
+          <p>
+            J’ai voulu créer un portfolio simple à parcourir, qui montre à la fois
+            mon évolution pendant le BTS SIO, mes réalisations concrètes, ma manière
+            de travailler et les sujets techniques qui m’intéressent vraiment.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Ce qu’on y trouve</h3>
+          <p>
+            Tu y retrouveras mon profil, mes réalisations professionnelles, mes projets
+            personnels, ma veille technologique, ainsi que les éléments utiles pour
+            comprendre mon positionnement et mon évolution.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Ma façon d’avancer</h3>
+          <p>
+            J’essaie toujours de garder une logique propre : comprendre, structurer,
+            documenter, tester et améliorer. C’est cette manière de travailler que
+            je veux faire ressortir dans ce portfolio.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="quick-access-section">
+      <div class="section-heading">
+        <p class="kicker">Accès rapide</p>
+        <h2>Les rubriques principales du portfolio</h2>
+      </div>
+
+      <div class="quick-access-grid">
+        <article class="nav-card">
+          <img src="photo de profile.png" alt="Photo de profil de Waseem Altaweel" />
+          <div class="nav-card-content">
+            <h3>Profil</h3>
+            <p>
+              Une présentation de mon parcours, de ma formation, de mon projet
+              professionnel, de mon expérience et de mes compétences principales.
+            </p>
+            <a href="about.html" class="btn btn-primary">Voir mon profil</a>
+          </div>
+        </article>
+
+        <article class="nav-card">
+          <img src="photo cloud serveur.jpg" alt="Illustration infrastructure et réalisations professionnelles" />
+          <div class="nav-card-content">
+            <h3>Réalisations professionnelles</h3>
+            <p>
+              Les projets et travaux réalisés dans le cadre de ma formation, avec une
+              logique claire, des objectifs concrets et, plus tard, la documentation
+              associée quand elle sera intégrée.
+            </p>
+            <a href="realisations-professionnelles.html" class="btn btn-primary">Voir les réalisations</a>
+          </div>
+        </article>
+
+        <article class="nav-card">
+          <img src="kali-linux.jpg" alt="Illustration cybersécurité et veille technologique" />
+          <div class="nav-card-content">
+            <h3>Veille technologique</h3>
+            <p>
+              Une veille orientée cybersécurité et infrastructure, avec des sujets
+              choisis pour leur intérêt concret, leur impact et leur utilité.
+            </p>
+            <a href="veille-technologique.html" class="btn btn-primary">Voir la veille</a>
+          </div>
+        </article>
+
+        <article class="nav-card">
+          <img src="logo.png" alt="Logo du portfolio Altaweel Waseem" />
+          <div class="nav-card-content">
+            <h3>CV & contact</h3>
+            <p>
+              Un accès rapide à mon CV, à mon LinkedIn et aux moyens de me contacter
+              si tu souhaites échanger au sujet de mon parcours ou de mes projets.
+            </p>
+            <a href="contact.html" class="btn btn-primary">Me contacter</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <div class="section-heading">
+        <p class="kicker">BTS SIO</p>
+        <h2>Le cadre de ma formation et mon orientation en SISR</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Le BTS SIO</h3>
+          <ul>
+            <li>Une formation centrée sur l’informatique en environnement professionnel</li>
+            <li>Des compétences construites autour des services, des systèmes et des réseaux</li>
+            <li>Une logique mêlant technique, méthode, documentation et résolution de problèmes</li>
+            <li>Une formation professionnalisante avec projets, veille et réalisations concrètes</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Option SISR</h3>
+          <ul>
+            <li>Spécialisation en solutions d’infrastructure, systèmes et réseaux</li>
+            <li>Administration d’environnements Windows et Linux</li>
+            <li>Services réseau, sécurité, accès, continuité et supervision</li>
+            <li>Intervention sur des architectures techniques fiables et maintenables</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Ce que j’y développe</h3>
+          <ul>
+            <li>Une base solide en systèmes, réseaux et cybersécurité</li>
+            <li>Des automatismes de diagnostic, d’analyse et de structuration</li>
+            <li>Une approche plus concrète du déploiement et du support</li>
+            <li>Une progression vers des environnements plus exigeants et plus complets</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Mon cap</h3>
+          <ul>
+            <li>Poursuivre vers un cycle ingénieur après le BTS</li>
+            <li>Monter en responsabilité sur des sujets d’infrastructure et de sécurité</li>
+            <li>Continuer à progresser sur l’IT/OT et l’informatique industrielle</li>
+            <li>Rester polyvalent, fiable et utile sur le terrain</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="value-section">
+      <div class="section-heading">
+        <p class="kicker">Repères</p>
+        <h2>Quelques éléments importants sur mon profil</h2>
+      </div>
+
+      <div class="value-grid">
+        <article class="glass-card">
+          <h3>Expérience actuelle</h3>
+          <p>
+            Depuis 2024, j’évolue chez MB Informatique sur des sujets qui me permettent
+            de gagner en maturité technique, en autonomie et en compréhension globale
+            des environnements informatiques.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Certification en cours</h3>
+          <p>
+            Je prépare actuellement la certification Cisco CCNA, dans la continuité
+            de mon intérêt pour les réseaux, l’architecture et la compréhension
+            solide des infrastructures.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Localisation</h3>
+          <p>
+            Je suis mobile entre Strasbourg et Mulhouse. Ce double ancrage me permet
+            de rester ouvert à différentes opportunités de formation, de projet
+            et d’évolution.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-card">
+        <p class="kicker">Continuer la visite</p>
+        <h2>Explorer mon parcours, mes réalisations et ma veille</h2>
+        <p>
+          Ce portfolio a pour but de présenter mon évolution de manière claire,
+          sincère et structurée. Il ne cherche pas à en faire trop, mais à montrer
+          sérieusement ce que je fais, ce que j’apprends et la direction dans laquelle
+          je veux avancer.
+        </p>
+
+        <div class="cta-actions">
+          <a href="about.html" class="btn btn-primary">Profil</a>
+          <a href="realisations-professionnelles.html" class="btn btn-secondary">Réalisations pro</a>
+          <a href="projets-perso.html" class="btn btn-secondary">Projets perso</a>
+          <a href="veille-technologique.html" class="btn btn-secondary">Veille techno</a>
+          <a href="cv.pdf" class="btn btn-secondary" download>CV PDF</a>
+          <a href="contact.html" class="btn btn-secondary">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+      <li><a href="plan-du-site.html">Plan du site</a></li>
+      <li><a href="veille-technologique.html">Veille techno</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>© 2026 Altaweel Waseem — Portfolio</p>
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>
