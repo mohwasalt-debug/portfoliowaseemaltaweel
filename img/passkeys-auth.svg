@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+  <title id="t">Passkeys et authentification</title>
+  <desc id="d">Authentification sans mot de passe avec clé cryptographique et empreinte.</desc>
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="20%" r="85%">
+      <stop offset="0" stop-color="#f0e7ff"/>
+      <stop offset="0.55" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#e8fff7"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#007aff"/>
+      <stop offset="0.55" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#22c6f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#4c1d95" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="42" fill="url(#bg)"/>
+  <rect x="270" y="130" width="660" height="500" rx="42" fill="#fff" filter="url(#shadow)"/>
+  <rect x="500" y="190" width="200" height="270" rx="92" fill="none" stroke="url(#accent)" stroke-width="18"/>
+  <path d="M552 268c34-38 96-38 130 0M535 330c52-67 148-67 200 0M572 396c18 20 38 31 60 31 38 0 68-31 68-69 0-54-44-98-98-98s-98 44-98 98" fill="none" stroke="#1f2937" stroke-width="16" stroke-linecap="round"/>
+  <path d="M742 424h112M818 368l48 56-48 56" fill="none" stroke="url(#accent)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="555" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="48" font-weight="850" fill="#101418">Passkeys</text>
+</svg>
