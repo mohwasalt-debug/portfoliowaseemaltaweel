@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Portfolio de Waseem Altaweel — étudiant en BTS SIO option SISR. Parcours, réalisations professionnelles, projets, veille technologique, compétences en systèmes, réseaux et cybersécurité."
+    content="Portfolio de Waseem Altaweel, étudiant en BTS SIO option SISR. Parcours, réalisations professionnelles, projets personnels, veille technologique et contact."
   />
   <title>Altaweel Waseem — Accueil</title>
   <link rel="stylesheet" href="style.css" />
@@ -26,9 +26,9 @@
       <ul class="nav-menu">
         <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="about.html">Profil</a></li>
-        <li><a href="realisations-professionnelles.html">Réalisations pro</a></li>
-        <li><a href="projets-perso.html">Projets perso</a></li>
-        <li><a href="veille-technologique.html">Veille techno</a></li>
+        <li><a href="realisations-professionnelles.html">Réalisations professionnelles</a></li>
+        <li><a href="projets-perso.html">Projets personnels</a></li>
+        <li><a href="veille-technologique.html">Veille technologique</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -38,53 +38,53 @@
     <section class="hero hero-home">
       <div class="hero-content">
         <p class="kicker">Portfolio BTS SIO</p>
-        <h1>Bonjour, je suis Waseem Altaweel</h1>
+        <h1>Bienvenue sur mon portfolio</h1>
         <p class="hero-subtitle">
-          Je suis étudiant en BTS SIO option SISR et je construis un profil orienté
-          systèmes, réseaux, cybersécurité et infrastructure. Ce portfolio regroupe
-          mon parcours, mes réalisations, mes projets et ma veille technologique,
-          avec une approche simple, concrète et tournée vers le terrain.
+          Je m’appelle Waseem Altaweel. Je suis étudiant en BTS SIO option SISR,
+          avec un intérêt particulier pour les systèmes, les réseaux, la cybersécurité
+          et les environnements techniques concrets. Ce site présente mon parcours,
+          mes réalisations, mes projets et ma veille technologique.
         </p>
 
         <div class="hero-actions">
-          <a href="about.html" class="btn btn-primary">Découvrir mon profil</a>
+          <a href="about.html" class="btn btn-primary">Voir mon profil</a>
           <a href="realisations-professionnelles.html" class="btn btn-secondary">Voir mes réalisations</a>
-          <a href="cv.pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
+          <a href="CV_Altaweel_Waseem (3).pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
           <a
-            href="https://www.linkedin.com/in/waseem-altaweel-830219311"
+            href="https://linkedin.com/in/waseem-altaweel-830219311"
             class="btn btn-secondary"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Voir mon LinkedIn
+            LinkedIn
           </a>
         </div>
 
         <div class="hero-highlights">
           <article class="highlight-card">
-            <h2>Mon parcours actuel</h2>
+            <h2>BTS SIO option SISR</h2>
             <p>
-              Je suis en BTS SIO option SISR, avec une orientation claire vers
-              l’administration systèmes et réseaux, la sécurisation des environnements
-              et la continuité de service.
+              Ma formation est orientée vers les solutions d’infrastructure,
+              systèmes et réseaux. Elle me permet de développer une base solide
+              en administration, en services réseau et en sécurité.
             </p>
           </article>
 
           <article class="highlight-card">
-            <h2>Expérience terrain</h2>
+            <h2>Expérience professionnelle</h2>
             <p>
-              En parallèle, j’évolue chez MB Informatique, où je participe à des sujets
-              d’infrastructure, de déploiement, de support technique et d’organisation
-              d’environnements informatiques.
+              En parallèle de mon parcours, j’évolue chez MB Informatique,
+              où je découvre des problématiques concrètes liées au déploiement,
+              au support, aux environnements réseau et à l’organisation technique.
             </p>
           </article>
 
           <article class="highlight-card">
-            <h2>Objectif professionnel</h2>
+            <h2>Suite de mon parcours</h2>
             <p>
-              Mon but est de continuer vers un cycle ingénieur et de progresser sur des
-              missions à forte valeur ajoutée en infrastructure, réseaux, cybersécurité
-              et environnement industriel.
+              Mon objectif est de poursuivre vers un cycle ingénieur, tout en
+              continuant à progresser sur des sujets liés à l’infrastructure,
+              aux réseaux, à la cybersécurité et à l’informatique industrielle.
             </p>
           </article>
         </div>
@@ -93,35 +93,34 @@
 
     <section class="intro-section">
       <div class="section-heading">
-        <p class="kicker">À propos de ce portfolio</p>
-        <h2>Un espace pensé pour présenter mon parcours de manière claire</h2>
+        <p class="kicker">Présentation</p>
+        <h2>Le but de ce portfolio</h2>
       </div>
 
       <div class="intro-grid">
         <article class="glass-card">
-          <h3>Pourquoi ce site</h3>
+          <h3>Mon parcours</h3>
           <p>
-            J’ai voulu créer un portfolio simple à parcourir, qui montre à la fois
-            mon évolution pendant le BTS SIO, mes réalisations concrètes, ma manière
-            de travailler et les sujets techniques qui m’intéressent vraiment.
+            Cette première partie permet de comprendre qui je suis, d’où je viens,
+            et dans quelle direction je souhaite évoluer dans le domaine informatique.
           </p>
         </article>
 
         <article class="glass-card">
-          <h3>Ce qu’on y trouve</h3>
+          <h3>Mes réalisations</h3>
           <p>
-            Tu y retrouveras mon profil, mes réalisations professionnelles, mes projets
-            personnels, ma veille technologique, ainsi que les éléments utiles pour
-            comprendre mon positionnement et mon évolution.
+            J’y rassemble les travaux et situations professionnelles les plus utiles
+            pour montrer ma progression, ma manière de travailler et les compétences
+            que j’ai développées pendant ma formation.
           </p>
         </article>
 
         <article class="glass-card">
-          <h3>Ma façon d’avancer</h3>
+          <h3>Ma veille</h3>
           <p>
-            J’essaie toujours de garder une logique propre : comprendre, structurer,
-            documenter, tester et améliorer. C’est cette manière de travailler que
-            je veux faire ressortir dans ce portfolio.
+            La veille technologique me permet de suivre des sujets qui m’intéressent,
+            d’améliorer ma culture technique et de garder un regard actif sur
+            l’évolution du domaine.
           </p>
         </article>
       </div>
@@ -130,7 +129,7 @@
     <section class="quick-access-section">
       <div class="section-heading">
         <p class="kicker">Accès rapide</p>
-        <h2>Les rubriques principales du portfolio</h2>
+        <h2>Les pages principales</h2>
       </div>
 
       <div class="quick-access-grid">
@@ -140,46 +139,45 @@
             <h3>Profil</h3>
             <p>
               Une présentation de mon parcours, de ma formation, de mon projet
-              professionnel, de mon expérience et de mes compétences principales.
+              professionnel, de mon expérience et de mes compétences.
             </p>
-            <a href="about.html" class="btn btn-primary">Voir mon profil</a>
+            <a href="about.html" class="btn btn-primary">Accéder au profil</a>
           </div>
         </article>
 
         <article class="nav-card">
-          <img src="photo cloud serveur.jpg" alt="Illustration infrastructure et réalisations professionnelles" />
+          <img src="photo cloud serveur.jpg" alt="Illustration d'une infrastructure informatique" />
           <div class="nav-card-content">
             <h3>Réalisations professionnelles</h3>
             <p>
-              Les projets et travaux réalisés dans le cadre de ma formation, avec une
-              logique claire, des objectifs concrets et, plus tard, la documentation
-              associée quand elle sera intégrée.
+              Cette page regroupe les réalisations importantes de mon parcours,
+              notamment celles liées à ma formation et à mes travaux techniques.
             </p>
             <a href="realisations-professionnelles.html" class="btn btn-primary">Voir les réalisations</a>
           </div>
         </article>
 
         <article class="nav-card">
-          <img src="kali-linux.jpg" alt="Illustration cybersécurité et veille technologique" />
+          <img src="photo voiture rouge.png" alt="Illustration des projets personnels" />
           <div class="nav-card-content">
-            <h3>Veille technologique</h3>
+            <h3>Projets personnels</h3>
             <p>
-              Une veille orientée cybersécurité et infrastructure, avec des sujets
-              choisis pour leur intérêt concret, leur impact et leur utilité.
+              Des projets réalisés en autonomie pour approfondir certains sujets,
+              expérimenter davantage et progresser de manière plus personnelle.
             </p>
-            <a href="veille-technologique.html" class="btn btn-primary">Voir la veille</a>
+            <a href="projets-perso.html" class="btn btn-primary">Voir les projets</a>
           </div>
         </article>
 
         <article class="nav-card">
-          <img src="logo.png" alt="Logo du portfolio Altaweel Waseem" />
+          <img src="kali-linux.jpg" alt="Illustration de veille technologique" />
           <div class="nav-card-content">
-            <h3>CV & contact</h3>
+            <h3>Veille technologique</h3>
             <p>
-              Un accès rapide à mon CV, à mon LinkedIn et aux moyens de me contacter
-              si tu souhaites échanger au sujet de mon parcours ou de mes projets.
+              Une sélection de sujets de veille en lien avec la cybersécurité,
+              les réseaux et l’actualité technique qui m’intéressent.
             </p>
-            <a href="contact.html" class="btn btn-primary">Me contacter</a>
+            <a href="veille-technologique.html" class="btn btn-primary">Consulter la veille</a>
           </div>
         </article>
       </div>
@@ -187,18 +185,18 @@
 
     <section class="skills-section">
       <div class="section-heading">
-        <p class="kicker">BTS SIO</p>
-        <h2>Le cadre de ma formation et mon orientation en SISR</h2>
+        <p class="kicker">Formation</p>
+        <h2>Le BTS SIO et l’option SISR</h2>
       </div>
 
       <div class="skills-grid">
         <article class="skill-card">
           <h3>Le BTS SIO</h3>
           <ul>
-            <li>Une formation centrée sur l’informatique en environnement professionnel</li>
-            <li>Des compétences construites autour des services, des systèmes et des réseaux</li>
-            <li>Une logique mêlant technique, méthode, documentation et résolution de problèmes</li>
-            <li>Une formation professionnalisante avec projets, veille et réalisations concrètes</li>
+            <li>Une formation orientée vers les services informatiques</li>
+            <li>Un cadre professionnalisant avec projets, veille et réalisations</li>
+            <li>Une progression fondée sur la technique, la méthode et la pratique</li>
+            <li>Une formation pensée pour préparer à la poursuite d’études ou à l’emploi</li>
           </ul>
         </article>
 
@@ -206,29 +204,29 @@
           <h3>Option SISR</h3>
           <ul>
             <li>Spécialisation en solutions d’infrastructure, systèmes et réseaux</li>
-            <li>Administration d’environnements Windows et Linux</li>
-            <li>Services réseau, sécurité, accès, continuité et supervision</li>
-            <li>Intervention sur des architectures techniques fiables et maintenables</li>
+            <li>Administration de services et d’environnements techniques</li>
+            <li>Configuration, maintenance et sécurisation des services réseau</li>
+            <li>Approche concrète des besoins d’exploitation et de continuité</li>
           </ul>
         </article>
 
         <article class="skill-card">
           <h3>Ce que j’y développe</h3>
           <ul>
-            <li>Une base solide en systèmes, réseaux et cybersécurité</li>
-            <li>Des automatismes de diagnostic, d’analyse et de structuration</li>
-            <li>Une approche plus concrète du déploiement et du support</li>
-            <li>Une progression vers des environnements plus exigeants et plus complets</li>
+            <li>Des bases solides en systèmes, réseaux et cybersécurité</li>
+            <li>Des réflexes de diagnostic, de rigueur et de documentation</li>
+            <li>Une meilleure compréhension des environnements professionnels</li>
+            <li>Une progression régulière à travers les projets et les réalisations</li>
           </ul>
         </article>
 
         <article class="skill-card">
-          <h3>Mon cap</h3>
+          <h3>Mon orientation</h3>
           <ul>
-            <li>Poursuivre vers un cycle ingénieur après le BTS</li>
-            <li>Monter en responsabilité sur des sujets d’infrastructure et de sécurité</li>
-            <li>Continuer à progresser sur l’IT/OT et l’informatique industrielle</li>
-            <li>Rester polyvalent, fiable et utile sur le terrain</li>
+            <li>Infrastructure</li>
+            <li>Systèmes et réseaux</li>
+            <li>Cybersécurité</li>
+            <li>Évolution vers un cycle ingénieur</li>
           </ul>
         </article>
       </div>
@@ -237,34 +235,32 @@
     <section class="value-section">
       <div class="section-heading">
         <p class="kicker">Repères</p>
-        <h2>Quelques éléments importants sur mon profil</h2>
+        <h2>Quelques points importants sur mon parcours</h2>
       </div>
 
       <div class="value-grid">
         <article class="glass-card">
           <h3>Expérience actuelle</h3>
           <p>
-            Depuis 2024, j’évolue chez MB Informatique sur des sujets qui me permettent
-            de gagner en maturité technique, en autonomie et en compréhension globale
-            des environnements informatiques.
+            Depuis 2024, je travaille chez MB Informatique, ce qui me permet
+            de gagner en expérience sur des environnements réels et de mieux
+            comprendre les attentes du terrain. :contentReference[oaicite:1]{index=1}
           </p>
         </article>
 
         <article class="glass-card">
-          <h3>Certification en cours</h3>
+          <h3>Formation en cours</h3>
           <p>
-            Je prépare actuellement la certification Cisco CCNA, dans la continuité
-            de mon intérêt pour les réseaux, l’architecture et la compréhension
-            solide des infrastructures.
+            Je suis actuellement en BTS SIO option SISR au CCI Campus Strasbourg,
+            avec une poursuite d’études visée en cycle ingénieur. :contentReference[oaicite:2]{index=2}
           </p>
         </article>
 
         <article class="glass-card">
-          <h3>Localisation</h3>
+          <h3>Certification</h3>
           <p>
-            Je suis mobile entre Strasbourg et Mulhouse. Ce double ancrage me permet
-            de rester ouvert à différentes opportunités de formation, de projet
-            et d’évolution.
+            Je prépare actuellement la certification Cisco CCNA, en cohérence avec
+            mon intérêt pour les réseaux et l’infrastructure. :contentReference[oaicite:3]{index=3}
           </p>
         </article>
       </div>
@@ -272,21 +268,18 @@
 
     <section class="cta-section">
       <div class="cta-card">
-        <p class="kicker">Continuer la visite</p>
-        <h2>Explorer mon parcours, mes réalisations et ma veille</h2>
+        <p class="kicker">Continuer</p>
+        <h2>Découvrir la suite du portfolio</h2>
         <p>
-          Ce portfolio a pour but de présenter mon évolution de manière claire,
-          sincère et structurée. Il ne cherche pas à en faire trop, mais à montrer
-          sérieusement ce que je fais, ce que j’apprends et la direction dans laquelle
-          je veux avancer.
+          La suite du site permet d’aller plus loin dans mon parcours, mes réalisations,
+          mes projets personnels et ma veille technologique.
         </p>
 
         <div class="cta-actions">
           <a href="about.html" class="btn btn-primary">Profil</a>
-          <a href="realisations-professionnelles.html" class="btn btn-secondary">Réalisations pro</a>
-          <a href="projets-perso.html" class="btn btn-secondary">Projets perso</a>
-          <a href="veille-technologique.html" class="btn btn-secondary">Veille techno</a>
-          <a href="cv.pdf" class="btn btn-secondary" download>CV PDF</a>
+          <a href="realisations-professionnelles.html" class="btn btn-secondary">Réalisations professionnelles</a>
+          <a href="projets-perso.html" class="btn btn-secondary">Projets personnels</a>
+          <a href="veille-technologique.html" class="btn btn-secondary">Veille technologique</a>
           <a href="contact.html" class="btn btn-secondary">Contact</a>
         </div>
       </div>
@@ -297,7 +290,7 @@
     <ul>
       <li><a href="mentions-legales.html">Mentions légales</a></li>
       <li><a href="plan-du-site.html">Plan du site</a></li>
-      <li><a href="veille-technologique.html">Veille techno</a></li>
+      <li><a href="veille-technologique.html">Veille technologique</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <p>© 2026 Altaweel Waseem — Portfolio</p>
