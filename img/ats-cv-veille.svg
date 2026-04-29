@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Logiciel de selection de CV</title>
+  <desc id="desc">Illustration d'un CV analyse par un logiciel de recrutement.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="0.45" stop-color="#dff2ff"/>
+      <stop offset="1" stop-color="#eee7ff"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#007aff"/>
+      <stop offset="1" stop-color="#22c6f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#1f2d48" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="48" fill="url(#bg)"/>
+  <circle cx="990" cy="126" r="210" fill="#7b61ff" opacity=".12"/>
+  <circle cx="180" cy="648" r="230" fill="#22c6f2" opacity=".14"/>
+  <g filter="url(#shadow)">
+    <rect x="150" y="110" width="430" height="540" rx="34" fill="#fff" opacity=".86"/>
+    <rect x="210" y="180" width="180" height="26" rx="13" fill="#101418"/>
+    <rect x="210" y="235" width="300" height="18" rx="9" fill="#687382" opacity=".45"/>
+    <rect x="210" y="282" width="250" height="18" rx="9" fill="#687382" opacity=".32"/>
+    <rect x="210" y="352" width="300" height="18" rx="9" fill="#007aff" opacity=".4"/>
+    <rect x="210" y="400" width="255" height="18" rx="9" fill="#687382" opacity=".32"/>
+    <rect x="210" y="448" width="310" height="18" rx="9" fill="#687382" opacity=".32"/>
+    <rect x="210" y="516" width="145" height="42" rx="21" fill="url(#blue)" opacity=".9"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="645" y="172" width="380" height="416" rx="42" fill="#ffffff" opacity=".64"/>
+    <circle cx="835" cy="330" r="100" fill="none" stroke="url(#blue)" stroke-width="24"/>
+    <path d="M806 330l38 38 86-108" fill="none" stroke="#30d158" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="725" y="480" width="220" height="24" rx="12" fill="#101418" opacity=".76"/>
+    <rect x="765" y="525" width="140" height="18" rx="9" fill="#687382" opacity=".45"/>
+  </g>
+  <text x="645" y="132" font-family="Arial, sans-serif" font-size="42" font-weight="800" fill="#101418">ATS</text>
+  <text x="725" y="132" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#687382">CV analyse par logiciel</text>
+</svg>
