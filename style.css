@@ -93,8 +93,8 @@ img {
 }
 
 .site-header {
-  position: sticky;
-  top: 18px;
+  position: relative;
+  top: auto;
   z-index: 80;
   width: var(--header);
   margin: 22px auto 0;
@@ -494,7 +494,8 @@ p {
 
 .project img.mx5-media {
   height: 300px;
-  object-position: center 78%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .project img.contain-media {
@@ -846,7 +847,7 @@ footer p {
   }
 
   .site-header {
-    top: 10px;
+    top: auto;
     width: min(1180px, calc(100% - 24px));
     flex-wrap: wrap;
     border-radius: 22px;
