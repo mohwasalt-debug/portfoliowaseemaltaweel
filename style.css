@@ -531,10 +531,10 @@ p {
 
 .photo-duo {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  height: 360px;
-  margin-bottom: 0;
+  height: 250px;
+  margin-bottom: 18px;
 }
 
 .photo-duo .photo-frame {
@@ -544,7 +544,7 @@ p {
 
 .photo-full {
   object-fit: cover;
-  object-position: center 52%;
+  object-position: center 56%;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.64), rgba(231, 239, 255, 0.42)),
     radial-gradient(circle at 18% 30%, rgba(34, 211, 238, 0.16), transparent 34%);
@@ -552,24 +552,21 @@ p {
 
 .photo-detail {
   object-fit: cover;
-  object-position: center;
+  object-position: center 58%;
 }
 
 .project-photo {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-  gap: 24px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-photo .project-body {
-  padding: 18px 12px;
+  padding: 0 8px 10px;
 }
 
 .project-photo h2 {
-  font-size: clamp(28px, 4vw, 52px);
-  max-width: 10ch;
+  font-size: clamp(24px, 3vw, 34px);
+  max-width: none;
 }
 
 .bts-content {
@@ -895,12 +892,7 @@ footer p {
 
   .photo-duo {
     grid-template-columns: 1fr 1fr;
-    height: min(86vw, 390px);
-  }
-
-  .project-photo {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    height: min(68vw, 320px);
   }
 
   .project-photo h2 {
@@ -956,11 +948,12 @@ footer p {
   }
 
   .photo-duo {
-    grid-template-columns: 1fr;
-    height: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    height: 190px;
   }
 
   .photo-duo .photo-frame {
-    height: 230px;
+    height: 100%;
   }
 }
