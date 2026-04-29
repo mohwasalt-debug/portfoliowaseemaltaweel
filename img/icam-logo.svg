@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" role="img" aria-labelledby="title desc">
+  <title id="title">Logo ICAM</title>
+  <desc id="desc">Badge ICAM pour l'objectif de cursus ingénieur informatique industriel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eaf7ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#007aff"/>
+      <stop offset=".55" stop-color="#22c6f2"/>
+      <stop offset="1" stop-color="#7b61ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="120" rx="28" fill="url(#bg)"/>
+  <path d="M35 74 C52 36 87 30 110 58 C133 86 168 80 185 42" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <text x="42" y="70" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="900" fill="#101418">icam</text>
+  <text x="36" y="98" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" fill="#687382">Ingénieur informatique industriel</text>
+</svg>
