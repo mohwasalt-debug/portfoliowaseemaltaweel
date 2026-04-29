@@ -5,17 +5,17 @@
   --text: #2b333d;
   --muted: #687382;
   --line: rgba(255, 255, 255, 0.72);
-  --glass: rgba(255, 255, 255, 0.48);
-  --glass-strong: rgba(255, 255, 255, 0.68);
+  --glass: rgba(255, 255, 255, 0.42);
+  --glass-strong: rgba(255, 255, 255, 0.72);
   --blue: #007aff;
   --cyan: #22c6f2;
   --green: #34c759;
   --pink: #ff2d55;
-  --shadow: 0 22px 60px rgba(33, 45, 64, 0.14);
-  --soft-shadow: 0 10px 28px rgba(33, 45, 64, 0.1);
-  --glow-blue: 0 0 42px rgba(0, 122, 255, 0.16);
-  --glow-violet: 0 0 46px rgba(139, 92, 246, 0.13);
-  --glass-edge: inset 0 1px 0 rgba(255, 255, 255, 0.92), inset 0 -1px 0 rgba(0, 122, 255, 0.08);
+  --shadow: 0 24px 70px rgba(33, 45, 64, 0.16);
+  --soft-shadow: 0 14px 34px rgba(33, 45, 64, 0.11);
+  --glow-blue: 0 0 48px rgba(0, 122, 255, 0.18);
+  --glow-violet: 0 0 52px rgba(139, 92, 246, 0.14);
+  --glass-edge: inset 0 1px 0 rgba(255, 255, 255, 0.96), inset 0 -1px 0 rgba(0, 122, 255, 0.1);
   --radius: 24px;
   --container: min(1120px, calc(100% - 36px));
   --header: min(1240px, calc(100% - 96px));
@@ -33,9 +33,10 @@ body {
   margin: 0;
   color: var(--text);
   background:
-    linear-gradient(120deg, rgba(255, 255, 255, 0.54), transparent 28%),
-    linear-gradient(135deg, rgba(0, 122, 255, 0.12), transparent 28%),
-    linear-gradient(220deg, rgba(52, 199, 89, 0.14), transparent 26%),
+    linear-gradient(115deg, rgba(255, 255, 255, 0.62), transparent 30%),
+    linear-gradient(140deg, rgba(0, 122, 255, 0.14), transparent 32%),
+    linear-gradient(225deg, rgba(52, 199, 89, 0.13), transparent 28%),
+    linear-gradient(315deg, rgba(139, 92, 246, 0.11), transparent 34%),
     linear-gradient(180deg, var(--bg), var(--bg-2));
   font: 400 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -56,13 +57,11 @@ body::before {
 body::after {
   content: "";
   position: fixed;
-  right: -120px;
-  top: 120px;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.22), transparent 68%);
-  filter: blur(18px);
+  inset: 0;
+  background:
+    linear-gradient(95deg, transparent 0 22%, rgba(0, 122, 255, 0.05) 34%, transparent 48%),
+    linear-gradient(245deg, transparent 0 46%, rgba(34, 198, 242, 0.06) 56%, transparent 72%),
+    linear-gradient(180deg, rgba(255,255,255,0.25), transparent 46%);
   pointer-events: none;
   z-index: -1;
 }
@@ -235,11 +234,12 @@ footer {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background:
-    linear-gradient(145deg, rgba(255,255,255,0.62), rgba(255,255,255,0.34) 42%, rgba(223,243,255,0.28)),
+    linear-gradient(145deg, rgba(255,255,255,0.72), rgba(255,255,255,0.32) 43%, rgba(223,243,255,0.3)),
+    linear-gradient(315deg, rgba(139,92,246,0.08), transparent 38%),
     var(--glass);
   backdrop-filter: blur(30px) saturate(190%);
   -webkit-backdrop-filter: blur(30px) saturate(190%);
-  box-shadow: var(--soft-shadow), var(--glass-edge);
+  box-shadow: var(--soft-shadow), var(--glow-violet), var(--glass-edge);
   position: relative;
   overflow: hidden;
 }
@@ -478,7 +478,7 @@ p {
 .contact-card:hover,
 .legal-card:hover,
 .site-card:hover {
-  box-shadow: var(--soft-shadow), var(--glow-blue);
+  box-shadow: var(--shadow), var(--glow-blue), var(--glass-edge);
   transform: translateY(-2px);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -496,6 +496,13 @@ p {
   height: 300px;
   object-fit: cover;
   object-position: center;
+}
+
+.project img.cyber-media {
+  height: 300px;
+  object-fit: contain;
+  object-position: center;
+  padding: 20px;
 }
 
 .project img.contain-media {
@@ -535,11 +542,15 @@ p {
   gap: 12px;
   height: 250px;
   margin-bottom: 18px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .photo-duo .photo-frame {
   height: 100%;
   margin-bottom: 0;
+  min-width: 0;
 }
 
 .photo-full {
@@ -558,9 +569,14 @@ p {
 .project-photo {
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
 .project-photo .project-body {
+  position: static;
+  display: block;
+  flex: 0 0 auto;
+  margin-top: 0;
   padding: 0 8px 10px;
 }
 
@@ -600,6 +616,46 @@ p {
 
 .project-body {
   padding: 0 10px 10px;
+}
+
+.professional-path {
+  display: grid;
+  gap: 18px;
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.path-item {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.66), rgba(255,255,255,0.28)),
+    rgba(255, 255, 255, 0.34);
+  box-shadow: var(--glass-edge);
+}
+
+.path-item span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.path-item strong {
+  display: block;
+  color: var(--ink);
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.doc-actions {
+  margin-top: 0;
 }
 
 .project p + p,
@@ -833,6 +889,10 @@ footer p {
     height: 240px;
   }
 
+  .path-grid {
+    grid-template-columns: 1fr;
+  }
+
   .sitemap-branches {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -892,7 +952,7 @@ footer p {
 
   .photo-duo {
     grid-template-columns: 1fr 1fr;
-    height: min(68vw, 320px);
+    height: min(62vw, 300px);
   }
 
   .project-photo h2 {
@@ -950,7 +1010,7 @@ footer p {
   .photo-duo {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    height: 190px;
+    height: 180px;
   }
 
   .photo-duo .photo-frame {
