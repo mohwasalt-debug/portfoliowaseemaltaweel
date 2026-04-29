@@ -481,8 +481,12 @@ p {
   background: radial-gradient(circle, rgba(0, 122, 255, 0.18), transparent 70%);
 }
 
-.image-focus-player {
-  object-position: 30% center;
+.project img.image-focus-player {
+  object-fit: contain;
+  object-position: center;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.64), rgba(231, 239, 255, 0.42)),
+    radial-gradient(circle at 18% 30%, rgba(34, 211, 238, 0.16), transparent 34%);
 }
 
 .project-body {
