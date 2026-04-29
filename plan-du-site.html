@@ -22,15 +22,26 @@
       <h1>Plan du site</h1>
     </div>
     <section class="site-card">
-      <div class="sitemap">
+      <div class="sitemap sitemap-diagram" aria-label="Diagramme visuel du plan du site">
         <a class="sitemap-node sitemap-root" href="index.html">Accueil</a>
+        <div class="sitemap-stem" aria-hidden="true"></div>
         <div class="sitemap-branches">
-          <a class="sitemap-node" href="about.html">Profil</a>
-          <a class="sitemap-node" href="projets-pro.html">Projets professionnels</a>
-          <a class="sitemap-node" href="projets-perso.html">Projets personnels</a>
-          <a class="sitemap-node" href="veille-technologique.html">Veille technologique</a>
-          <a class="sitemap-node" href="contact.html">Contact</a>
-          <a class="sitemap-node" href="mentions-legales.html">Mentions légales</a>
+          <article class="sitemap-group">
+            <span class="sitemap-label">Présentation</span>
+            <a class="sitemap-node" href="about.html">Profil et parcours</a>
+            <a class="sitemap-node" href="index.html#formation">BTS SIO</a>
+          </article>
+          <article class="sitemap-group">
+            <span class="sitemap-label">Réalisations</span>
+            <a class="sitemap-node" href="projets-pro.html">Projets professionnels AP3 / AP4</a>
+            <a class="sitemap-node" href="projets-perso.html">Projets personnels</a>
+          </article>
+          <article class="sitemap-group">
+            <span class="sitemap-label">Suivi</span>
+            <a class="sitemap-node" href="veille-technologique.html">Veille technologique</a>
+            <a class="sitemap-node" href="contact.html">Contact</a>
+            <a class="sitemap-node" href="mentions-legales.html">Mentions légales / RGPD</a>
+          </article>
         </div>
       </div>
     </section>
