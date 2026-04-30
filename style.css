@@ -1013,11 +1013,89 @@ p {
 }
 
 .evolution-phrase {
-  max-width: 42ch;
+  max-width: 48ch;
   color: #263241;
   font-size: 15px;
   font-weight: 750;
   line-height: 1.38;
+}
+
+.future-panel {
+  display: grid;
+  gap: 14px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.78), rgba(255,255,255,0.32) 44%, rgba(224,246,255,0.36)),
+    linear-gradient(120deg, rgba(255,211,51,0.16), transparent 28%),
+    linear-gradient(318deg, rgba(0,122,255,0.12), transparent 42%),
+    var(--glass);
+  box-shadow: var(--shadow), var(--glow-cyan), var(--glass-edge);
+}
+
+.future-panel > p {
+  max-width: 920px;
+}
+
+.future-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.future-card {
+  display: grid;
+  grid-template-columns: minmax(130px, 190px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  min-height: 170px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.82), rgba(255,255,255,0.34)),
+    radial-gradient(circle at 14% 14%, rgba(0,122,255,0.1), transparent 36%),
+    rgba(255,255,255,0.38);
+  box-shadow: var(--glass-edge), 0 18px 40px rgba(31,45,72,0.08);
+}
+
+.future-card img {
+  width: 100%;
+  max-height: 116px;
+  object-fit: contain;
+  padding: 8px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.62);
+}
+
+.future-card span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.future-card h3 {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+.future-card p {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.future-card-merck {
+  border-color: rgba(255, 211, 51, 0.5);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.82), rgba(255,249,220,0.42)),
+    radial-gradient(circle at 14% 14%, rgba(255,211,51,0.18), transparent 38%),
+    rgba(255,255,255,0.38);
+  box-shadow: var(--glass-edge), 0 0 34px rgba(255,211,51,0.14), 0 18px 40px rgba(31,45,72,0.08);
 }
 
 .project p + p,
@@ -1321,6 +1399,19 @@ footer p {
 
   .evolution-row {
     grid-template-columns: 1fr;
+  }
+
+  .future-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .future-card {
+    grid-template-columns: 1fr;
+  }
+
+  .future-card img {
+    max-width: 230px;
+    justify-self: center;
   }
 
   .evolution-head {
