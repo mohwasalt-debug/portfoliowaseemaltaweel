@@ -2,7 +2,7 @@ Documents nécessaires à la checklist E5 :
 
 Présents :
 - CV : documents/cv.pdf
-- Tableau de synthèse E5 fourni : documents/e5/tableau-croise-e5.pdf
+- Tableau de synthèse E5 + certificat emploi fourni : documents/e5/tableau-croise-e5.pdf
 - Missions E5 : documents/e5/missions-e5.pdf
 - PDF de veille : documents/veille/veille-technologique-sujet.pdf
 - E6 AP3 fiche situation : documents/e6/ap3-fiche-situation-professionnelle-1.pdf
