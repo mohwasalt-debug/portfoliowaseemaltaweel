@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Veille technologique - Waseem Altaweel</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
+
+    :root {
+      --ink: #101721;
+      --muted: #516071;
+      --blue: #0077ff;
+      --cyan: #54d9ff;
+      --purple: #7b61ff;
+      --glass: rgba(255, 255, 255, 0.74);
+      --line: rgba(0, 119, 255, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(0, 119, 255, 0.20), transparent 30%),
+        radial-gradient(circle at 85% 8%, rgba(123, 97, 255, 0.18), transparent 32%),
+        radial-gradient(circle at 70% 90%, rgba(84, 217, 255, 0.22), transparent 34%),
+        #eef6ff;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: #005fd4;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .page {
+      min-height: 269mm;
+      page-break-after: always;
+      padding: 2mm 0;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    .hero,
+    .panel,
+    .watch-card,
+    .method-card {
+      border: 1px solid rgba(255, 255, 255, 0.88);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(236, 249, 255, 0.72));
+      box-shadow: 0 16px 40px rgba(55, 108, 155, 0.16);
+    }
+
+    .hero {
+      border-radius: 28px;
+      padding: 26px 28px;
+      position: relative;
+      overflow: hidden;
+      min-height: 145px;
+    }
+
+    .hero::after,
+    .panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.62), transparent),
+        radial-gradient(circle at 95% 0%, rgba(84, 217, 255, 0.34), transparent 28%);
+      opacity: 0.75;
+    }
+
+    .hero > *,
+    .panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .kicker {
+      color: var(--blue);
+      display: block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.08;
+    }
+
+    h1 {
+      font-size: 35px;
+      max-width: 560px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin: 0 0 8px;
+    }
+
+    .lead {
+      color: #2f3b49;
+      font-size: 13px;
+      margin-top: 14px;
+      max-width: 640px;
+    }
+
+    .meta {
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      border: 1px solid rgba(0, 119, 255, 0.24);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: #223244;
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 10px;
+    }
+
+    .panel {
+      border-radius: 24px;
+      margin-top: 16px;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: 1fr 32px 1fr 32px 1fr;
+      align-items: stretch;
+      gap: 10px;
+      margin: 14px 0 10px;
+    }
+
+    .method-card {
+      border-color: rgba(0, 119, 255, 0.18);
+      border-radius: 18px;
+      padding: 14px;
+      min-height: 110px;
+    }
+
+    .method-card strong {
+      color: #006dff;
+      display: block;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .arrow {
+      align-self: center;
+      color: var(--blue);
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .criteria {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .criteria span {
+      border: 1px solid rgba(0, 119, 255, 0.18);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.58);
+      color: #27384a;
+      font-weight: 700;
+      padding: 8px 9px;
+      text-align: center;
+    }
+
+    .section-title {
+      margin: 22px 0 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .watch-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .watch-card {
+      border-radius: 22px;
+      overflow: hidden;
+      page-break-inside: avoid;
+    }
+
+    .watch-card img {
+      display: block;
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      background: rgba(255, 255, 255, 0.76);
+    }
+
+    .watch-card img.contain {
+      object-fit: contain;
+      padding: 14px;
+    }
+
+    .watch-body {
+      padding: 15px 16px 16px;
+    }
+
+    .date {
+      color: #006dff;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .watch-body h3 {
+      min-height: 35px;
+    }
+
+    .watch-body p {
+      color: #2f3b49;
+    }
+
+    .source {
+      border-top: 1px solid rgba(0, 119, 255, 0.14);
+      color: #405065;
+      font-size: 10px;
+      margin-top: 10px;
+      padding-top: 9px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 10px;
+      margin-top: 14px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <header class="hero">
+      <span class="kicker">BTS SIO SISR</span>
+      <h1>Veille technologique</h1>
+      <p class="lead">Ce document reprend ma méthodologie de veille et les sujets publiés sur mon portfolio. L'objectif est de montrer comment je sélectionne les informations utiles, comment je les résume et comment je peux les relier à mon parcours en systèmes et réseaux.</p>
+      <div class="meta">
+        <span class="pill">Waseem Altaweel</span>
+        <span class="pill">Portfolio E5</span>
+        <span class="pill">Mise à jour : mai 2026</span>
+      </div>
+    </header>
+
+    <article class="panel">
+      <span class="kicker">Méthodologie</span>
+      <h2>Comment je fais ma veille</h2>
+      <p>Ma veille se fait en trois étapes simples : je rassemble des informations depuis plusieurs sources, je trie ce qui est vraiment utile, puis je garde une trace claire dans mon portfolio pour pouvoir la réutiliser à l'oral ou dans un contexte professionnel.</p>
+
+      <div class="flow">
+        <div class="method-card">
+          <strong>1. Sources</strong>
+          <p>Je rassemble des informations depuis différentes plateformes et différents endroits : articles, vidéos, sites spécialisés, médias généralistes ou sites institutionnels.</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="method-card">
+          <strong>2. Méthode</strong>
+          <p>Je garde les informations les plus intéressantes, je vérifie la date et la source, puis j'en fais un résumé clair directement exploitable dans mon portfolio.</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="method-card">
+          <strong>3. Restitution</strong>
+          <p>Chaque veille peut être réutilisée dans un contexte personnel ou professionnel et mise en lien avec mon parcours SISR.</p>
+        </div>
+      </div>
+
+      <p><strong>Fil conducteur :</strong> rassemblement d'informations de diverses sources → tri des informations les plus intéressantes → mise en ligne et sauvegarde sur mon portfolio pour restitution en cas de besoin personnel ou professionnel.</p>
+    </article>
+
+    <article class="panel">
+      <span class="kicker">Critères</span>
+      <h2>Ce que je regarde avant de garder une actualité</h2>
+      <p>Je ne garde pas une information seulement parce qu'elle est récente. Elle doit aussi avoir un intérêt pour mon parcours, mon option SISR ou mon futur environnement professionnel.</p>
+      <div class="criteria">
+        <span>Date</span>
+        <span>Source</span>
+        <span>Lien SISR</span>
+        <span>Impact réel</span>
+        <span>Utilité orale</span>
+      </div>
+    </article>
+
+    <div class="section-title">
+      <span class="kicker">Actualités suivies</span>
+      <h2>Dernières veilles présentes sur le portfolio</h2>
+      <p>Les sujets sont classés du plus récent au plus ancien, comme sur la page de veille technologique.</p>
+    </div>
+
+    <div class="watch-grid">
+      <article class="watch-card">
+        <img src="../../img/parlement-ia-veille.jpg" alt="Parlement européen à Strasbourg">
+        <div class="watch-body">
+          <div class="date">28 avril 2026</div>
+          <h3>IA et rédaction parlementaire</h3>
+          <p>L'IA générative est déjà utilisée dans le travail parlementaire pour préparer des notes ou aider à traiter des informations. Le sujet devient sensible dès qu'il touche à des documents internes ou politiques.</p>
+          <p>J'en retiens qu'un outil d'IA peut devenir un point de fuite si des données confidentielles sont copiées dedans. Il faut donc un cadre clair, des outils maîtrisés et une validation humaine.</p>
+          <div class="source">Source : https://lcp.fr/actualites/l-intelligence-artificielle-deja-largement-utilisee-a-l-assemblee-mais-sans-cadre</div>
+        </div>
+      </article>
+
+      <article class="watch-card">
+        <img class="contain" src="../../img/sia-veille.png" alt="Logo SIA">
+        <div class="watch-body">
+          <div class="date">25 mars 2026</div>
+          <h3>Vol de données du SIA</h3>
+          <p>Le SIA contient des informations sensibles autour des armes et de leurs détenteurs. Même lorsqu'une fuite est discutée ou contestée, ce sujet rappelle que les plateformes de données personnelles doivent être protégées.</p>
+          <p>Je fais le lien avec le RGPD, la traçabilité des accès, la protection des bases et la réponse à incident.</p>
+          <div class="source">Source : https://www.sochasse.fr/savoir-chasser/armes-munitions/sia-la-fuite-que-tout-le-monde-redoutait-viendrait-elle-de-se-produire/</div>
+        </div>
+      </article>
+
+      <article class="watch-card">
+        <img src="../../img/msicatcher.jpg" alt="Illustration IMSI Catcher">
+        <div class="watch-body">
+          <div class="date">13 mars 2026</div>
+          <h3>IMSI Catcher & vol de numéros</h3>
+          <p>Les IMSI Catchers imitent une antenne mobile pour capter des téléphones proches. Dans les affaires récentes, ce matériel est aussi relié à l'envoi massif de SMS frauduleux.</p>
+          <p>Ce sujet montre que la sécurité ne concerne pas seulement les serveurs : le réseau mobile et l'identité téléphonique peuvent aussi devenir des points faibles.</p>
+          <div class="source">Source : https://www.leparisien.fr/faits-divers/paris-sept-personnes-condamnees-a-des-peines-allant-jusqua-cinq-ans-de-prison-ferme-pour-une-escroquerie-high-tech-aux-sms-frauduleux-13-03-2026-S7HRCY4UOZBXBLYMJGJ6MIBTDU.php</div>
+        </div>
+      </article>
+
+      <article class="watch-card">
+        <img class="contain" src="../../img/ats-cv-veille.svg" alt="Logiciel de sélection analysant un CV">
+        <div class="watch-body">
+          <div class="date">12 janvier 2026</div>
+          <h3>CV lus par des logiciels de sélection</h3>
+          <p>Certains recrutements passent par des logiciels capables de trier ou filtrer les CV avant même qu'un humain les lise. Un CV doit donc rester lisible, structuré et compatible avec ces outils.</p>
+          <p>Je le garde parce qu'il relie l'IA, les données personnelles et l'impact concret des algorithmes sur les candidats.</p>
+          <div class="source">Source : https://www.20minutes.fr/vie-pro/4195546-20260112-recrutement-attention-cv-peut-etre-lu-logiciels-selection</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="page">
+    <header class="hero">
+      <span class="kicker">Suite des sujets</span>
+      <h1>Veilles cybersécurité, fraude et infrastructures</h1>
+      <p class="lead">Ces sujets complètent ma veille avec des exemples plus orientés sécurité, ingénierie sociale, malware et administration réseau.</p>
+    </header>
+
+    <div class="watch-grid" style="margin-top: 18px;">
+      <article class="watch-card">
+        <img class="contain" src="../../img/ponzi-micode-veille.svg" alt="Illustration d'une pyramide de Ponzi">
+        <div class="watch-body">
+          <div class="date">30 juillet 2025</div>
+          <h3>Micode : pyramide de Ponzi</h3>
+          <p>Cette enquête s'intéresse à un système présenté comme une opportunité financière, mais dont le fonctionnement repose sur des mécanismes proches de l'arnaque pyramidale : promesses de gains, recrutement et mise en confiance.</p>
+          <p>Je le garde en veille parce que la cybersécurité ne se limite pas aux failles techniques. L'ingénierie sociale et la manipulation en ligne font aussi partie des risques à comprendre.</p>
+          <div class="source">Source : https://www.youtube.com/watch?v=90QU1zK6kM4</div>
+        </div>
+      </article>
+
+      <article class="watch-card">
+        <img class="contain" src="../../img/virus-micode-veille.svg" alt="Illustration d'un virus informatique avancé">
+        <div class="watch-body">
+          <div class="date">27 décembre 2024</div>
+          <h3>Micode : virus sophistiqué</h3>
+          <p>Cette vidéo revient sur un malware avancé capable de viser des systèmes précis, avec des effets qui dépassent le simple poste infecté.</p>
+          <p>Pour mon parcours SISR, j'en retiens l'importance de la supervision, des mises à jour, de la segmentation réseau et d'une vraie stratégie de défense.</p>
+          <div class="source">Source : https://www.youtube.com/@Micode/search?query=Le%20virus%20le%20plus%20sophistiqu%C3%A9%20du%2021e%20si%C3%A8cle</div>
+        </div>
+      </article>
+
+      <article class="watch-card full">
+        <img class="contain" src="../../img/unifi-veille.webp" alt="Produit UniFi">
+        <div class="watch-body">
+          <div class="date">1 avril 2021</div>
+          <h3>Affaire Ubiquiti / UniFi et fuite de données</h3>
+          <p>L'incident Ubiquiti m'a marqué parce qu'il touche un acteur très présent dans les réseaux Wi-Fi et les environnements UniFi. La leçon reste simple : le cloud, les comptes administrateurs et les accès internes doivent être surveillés sérieusement.</p>
+          <p>Dans une infrastructure, je retiens surtout le moindre privilège, les journaux, le MFA et une communication claire en cas d'incident.</p>
+          <div class="source">Source : https://www.theregister.com/2021/04/01/ubiquiti_data_breach/</div>
+        </div>
+      </article>
+    </div>
+
+    <article class="panel">
+      <span class="kicker">Bilan personnel</span>
+      <h2>Pourquoi cette veille me sert</h2>
+      <p>Cette veille me permet de rester attentif aux sujets qui reviennent dans mon parcours : sécurité des données, réseaux, IA, fraudes en ligne et administration d'infrastructures. Elle me donne aussi des exemples concrets pour expliquer mes choix techniques et ma progression pendant le BTS SIO SISR.</p>
+    </article>
+
+    <p class="footer-note">Document généré pour le portfolio de Waseem Altaweel - BTS SIO SISR.</p>
+  </section>
+</body>
+</html>
