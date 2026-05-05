@@ -447,6 +447,12 @@ p {
   grid-column: 1 / -1;
 }
 
+.section-title {
+  grid-column: 1 / -1;
+  margin: 16px 0 0;
+  color: var(--ink);
+}
+
 .glass-card h3,
 .project h2,
 .info-panel h2 {
