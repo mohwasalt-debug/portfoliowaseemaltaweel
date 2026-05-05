@@ -666,6 +666,12 @@ p {
   padding: 20px;
 }
 
+.project img.carrefour-media {
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .project img.contain-media {
   object-fit: contain;
   background:
@@ -1615,6 +1621,10 @@ footer p {
     height: 220px;
   }
 
+  .project img.carrefour-media {
+    height: 260px;
+  }
+
   .project-image-duo img {
     height: min(70vw, 320px);
   }
@@ -1684,6 +1694,10 @@ footer p {
 
   .project img {
     height: 190px;
+  }
+
+  .project img.carrefour-media {
+    height: 200px;
   }
 
   .project-image-duo {
