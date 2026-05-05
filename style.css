@@ -602,6 +602,12 @@ p {
   object-position: center;
 }
 
+.career-step img[src*="lycee-montaigne-officiel"] {
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
 .career-step h3 {
   margin: 0 0 8px;
   color: var(--ink);
