@@ -674,6 +674,33 @@ p {
   padding: 12px;
 }
 
+.project-image-duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.project-image-duo img {
+  width: 100%;
+  height: 340px;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.72), rgba(231,248,255,0.42)),
+    rgba(255,255,255,0.5);
+}
+
+.professional-duo img:first-child {
+  object-position: center 44%;
+}
+
+.professional-duo img:last-child {
+  object-position: center 48%;
+}
+
 .project img.logo-media {
   padding: 24px;
 }
@@ -1588,6 +1615,10 @@ footer p {
     height: 220px;
   }
 
+  .project-image-duo img {
+    height: min(70vw, 320px);
+  }
+
   .photo-duo {
     grid-template-columns: 1fr 1fr;
     height: min(62vw, 300px);
@@ -1653,6 +1684,14 @@ footer p {
 
   .project img {
     height: 190px;
+  }
+
+  .project-image-duo {
+    gap: 8px;
+  }
+
+  .project-image-duo img {
+    height: 210px;
   }
 
   .photo-duo {
